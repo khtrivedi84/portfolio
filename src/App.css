@@ -16,3 +16,7 @@ body {
     color: white !important;
 }
 
+.centered-ul {
+    justify-content: center;
+}
+
