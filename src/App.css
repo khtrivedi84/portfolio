@@ -16,12 +16,12 @@ body {
     width: 0;
     height: 2px;
     background-color: white;
-    transition: width 0.3s ease;  /* Add transition for the width property */
+    transition: width 0.3s ease; 
 }
 
 .custom-nav-link:hover::before {
     width: 100%;
-    transition-delay: 0.1s;  /* Optional: Add a delay to start the transition */
+    transition-delay: 0.1s; 
 }
 
 

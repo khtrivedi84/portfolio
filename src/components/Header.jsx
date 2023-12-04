@@ -5,8 +5,8 @@ const Header = () => {
     return(
         <>
        <div className="container customer-container">
-            <div class="text-center mb-3 profile-picture">
-                <img src="https://placehold.co/50x50" alt="Profile" class="img-fluid rounded-circle" width="50" height="50" />
+            <div className="text-center mb-3 profile-picture">
+                <img src="https://placehold.co/50x50" alt="Profile" className="img-fluid rounded-circle d-none d-md-block" width="50" height="50" />
             </div>
             <header className="d-flex justify-content-center py-3 header">
                 <a href="/" className="d-inline-flex link-body-emphasis text-decoration-none">
