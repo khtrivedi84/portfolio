@@ -2,66 +2,53 @@ body {
     background:url(./background-1.jpeg)!important;
 }
 
-.custom-nav-link {
+.hover_animation {
     position: relative;
-    color: white !important;
-    margin: 8px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 80px;
 }
 
-.custom-nav-link::before {
-    content: "";
+.normalText {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.6);
+}
+
+.h1_element {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  .h1_element::before,
+  .h1_element::after {
+    content: attr(data-text);
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s ease; 
-}
+    transition: 0.3s ease-out;
+  }
 
-.custom-nav-link:hover::before {
-    width: 100%;
-    transition-delay: 0.1s; 
-}
-
-
-.centered-ul {
-    justify-content: center;
-    padding: 5px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.22));
-    border-radius: 35px;
-    width: 100%;
-}
-
-.resume-btn {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.42));
-    border-radius: 30px !important;
+  .h1_element:hover::before {
+    color: black;
+    text-shadow: rgba(255,255,255,0.6);
+    transform: translate(14px, -14px);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    filter: drop-shadow(0 0 40px #1af7ff);
+  }
+  .h1_element:hover::after {
     color: white;
-    margin-left: 20px;
-    margin: 8px;
-}
-
-.resume-btn:hover {
-    color: white;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52));
-}
-
-.resume-btn:focus {
-    color: white;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52));
-}
-
-.header {
-    width: 100%;
-}
-
-.customer-container {
-    display: flex;
-}
-
-.profile-picture{
-    align-items: center;
-    margin-bottom: 0px !important;
-    display: flex;
-    margin-right: 10px;
-}
+    transform: translate(18px, -18px);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    filter: drop-shadow(0 0 40px #1af7ff);
+  }
