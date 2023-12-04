@@ -5,6 +5,7 @@ body {
 .custom-nav-link {
     position: relative;
     color: white !important;
+    margin: 8px 0;
 }
 
 .custom-nav-link::before {
@@ -37,6 +38,7 @@ body {
     border-radius: 30px !important;
     color: white;
     margin-left: 20px;
+    margin: 8px;
 }
 
 .resume-btn:hover {
