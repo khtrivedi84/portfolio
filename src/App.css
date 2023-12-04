@@ -2,12 +2,12 @@ body {
     background:url(./background-1.jpeg)!important;
 }
 
-.nav-link {
+.custom-nav-link {
     position: relative;
     color: white !important;
 }
 
-.nav-link::before {
+.custom-nav-link::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -18,7 +18,7 @@ body {
     transition: width 0.3s ease;  /* Add transition for the width property */
 }
 
-.nav-link:hover::before {
+.custom-nav-link:hover::before {
     width: 100%;
     transition-delay: 0.1s;  /* Optional: Add a delay to start the transition */
 }
@@ -26,8 +26,19 @@ body {
 
 .centered-ul {
     justify-content: center;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45));
-    padding: 11px;
-    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.22));
+    border-radius: 35px;
 }
 
+.resume-btn {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.42));
+    border-radius: 30px !important;
+    color: white;
+    margin-left: 20px;
+}
+
+.resume-btn:hover {
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52));
+}
