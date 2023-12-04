@@ -1,0 +1,18 @@
+body {
+    background:url(./background.png)!important;
+}
+
+.nav-home {
+    border-bottom: 2px solid green !important;
+    border-radius: 0 !important;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid green !important;
+    border-radius: 0 !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
