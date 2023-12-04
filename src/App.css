@@ -29,6 +29,7 @@ body {
     padding: 5px;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.22));
     border-radius: 35px;
+    width: 100%;
 }
 
 .resume-btn {
@@ -41,4 +42,13 @@ body {
 .resume-btn:hover {
     color: white;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52));
+}
+
+.resume-btn:focus {
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52));
+}
+
+.header {
+    width: 100%;
 }

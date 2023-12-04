@@ -4,8 +4,8 @@ import { IoCloudDownloadOutline } from "react-icons/io5";
 const Header = () => {
     return(
         <>
-       <div className="container has-dim-4">
-            <header className="d-flex justify-content-center py-3">
+       <div className="container">
+            <header className="d-flex justify-content-center py-3 header">
                 <a href="/" className="d-inline-flex link-body-emphasis text-decoration-none">
                 </a>
                 <ul className="nav nav-pills centered-ul">
