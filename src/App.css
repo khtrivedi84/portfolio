@@ -1,20 +1,28 @@
 body {
-    background:url(./background.png)!important;
-}
-
-.nav-home {
-    border-bottom: 2px solid green !important;
-    border-radius: 0 !important;
-}
-
-.nav-link:hover {
-    border-bottom: 2px solid white !important;
-    border-radius: 0 !important;
+    background:url(./background-1.jpeg)!important;
 }
 
 .nav-link {
+    position: relative;
     color: white !important;
 }
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;  /* Add transition for the width property */
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transition-delay: 0.1s;  /* Optional: Add a delay to start the transition */
+}
+
 
 .centered-ul {
     justify-content: center;
