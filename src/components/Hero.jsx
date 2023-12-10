@@ -6,6 +6,8 @@ const Hero = () => {
     return(
         <>
         <div className="container-fluid">
+        <div className="row justify-content-center align-items-center">
+        </div>
             <div className="row justify-content-center align-items-center" style={{textAlign:"end"}}>
                 <div className="col-sm-3"></div>
                 <div className="col-sm-10 col-md-3 text-light text-center">

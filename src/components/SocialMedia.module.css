@@ -74,6 +74,13 @@
     background: #333333;
     color: #ffffff;
   }
+
+  .wrapper .gmail:hover,
+  .wrapper .gmail:hover .tooltip,
+  .wrapper .gmail:hover .tooltip::before {
+    background: #C52220;
+    color: #ffffff;
+  }
   
   
       .meta-link {

@@ -15,8 +15,8 @@ const Header = () => {
                 <ul className={`nav nav-pills ${styles.centeredUl}`}>
                     <li className="nav-item"><Link to="#" className={`nav-link ${styles.customNavLink}`}>About</Link></li>
                     <li className="nav-item"><Link to="#" className={`nav-link ${styles.customNavLink}`}>Skills</Link></li>
-                    <li className="nav-item"><Link to="#" className={`nav-link ${styles.customNavLink}`}>Contact Me</Link></li>
-                    <li className="nav-item"><Link to="https://github.com/kishan12345" className={`nav-link ${styles.customNavLink}`}>GitHub</Link></li>
+                    <li className="nav-item"><Link to="#" className={`nav-link ${styles.customNavLink}`}>Projects</Link></li>
+                    <li className="nav-item"><Link to="https://github.com/kishan12345" className={`nav-link ${styles.customNavLink}`}>Contact Me</Link></li>
                     <li className="nav-item"><Link to="https://www.linkedin.com/in/kishantrivediscu/" className={`nav-link ${styles.customNavLink}`}>LinkedIn</Link></li>
                     <li className="nav-item"><Link to="" className={`nav-link ${styles.resumeBtn}`}>Resume <IoCloudDownloadOutline /></Link></li>
                 </ul>
