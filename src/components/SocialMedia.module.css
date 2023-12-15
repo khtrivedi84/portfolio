@@ -3,6 +3,12 @@
     list-style: none;
     padding-left: 0px !important;
   }
+
+@media (max-width: 992px) {
+    .wrapper {
+      transform: translateX(20%) !important;
+    }
+  }
   
   .wrapper .icon {
     position: relative;
