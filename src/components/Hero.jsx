@@ -7,7 +7,7 @@ const Hero = () => {
     return(
         <>
         <div className="container-fluid">
-            <div className="row justify-content-center align-items-center" style={{height:"100vh"}}>
+            <div className={`row justify-content-center ${styles.verticalCenter}`} style={{height:"100vh"}}>
                 <div className="col-sm-10 col-md-9 text-light text-center">
                 <div className={styles.hover_animation}>
                         <h1 data-text="I'm Kishan Trivedi" className={styles.h1_element}></h1>

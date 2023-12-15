@@ -73,3 +73,9 @@
     }
   }
   
+  /* Vertically align items to center on desktop  */
+  @media (min-width: 992px) {
+    .verticalCenter {
+      align-items: center;
+    }
+  }
