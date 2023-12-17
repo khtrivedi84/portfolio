@@ -79,6 +79,11 @@
       align-items: center;
     }
   }
+  @media (max-width: 992px) {
+    .verticalCenter {
+      margin-top: 10% !important;
+    }
+  }
 
   .scrollMore {
     height: 100px;
