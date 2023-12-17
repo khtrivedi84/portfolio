@@ -6,7 +6,7 @@ import { FaArrowDown } from 'react-icons/fa';
 const Hero = () => {
     return(
         <>
-        <div className="container-fluid">
+        <div className={`container-fluid ${styles.hero}`}>
             <div className={`row justify-content-center ${styles.verticalCenter}`} style={{height:"100vh"}}>
                 <div className="col-sm-10 col-md-9 text-light text-center position-relative">
                 <div className={styles.hover_animation}>
