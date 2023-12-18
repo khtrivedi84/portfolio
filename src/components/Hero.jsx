@@ -20,7 +20,7 @@ const Hero = () => {
                 <SocialMedia />
                 <button className={`btn btn-primary  ${styles.scrollMore}`}>
                     Know More!
-                    <div class={`position-absolute bottom-0 end-0  ${styles.bounceArrow}`}>
+                    <div className={`position-absolute bottom-0 end-0  ${styles.bounceArrow}`}>
                         <FaArrowDown size={20} color="#fff" />
                     </div>
                 </button>

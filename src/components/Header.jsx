@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 const Header = () => {
     return(
         <nav className="navbar navbar-expand-lg">
-        <div className={`container-fluid ${styles.customContainer}`}>
+            <div className={`container-fluid ${styles.customContainer}`}>
                 <div className={`text-center mb-3 ${styles.profilePicture}`}>
                     <img src="https://placehold.co/50x50" alt="Profile" className="img-fluid rounded-circle d-md-block" width="50" height="50" />
                 </div>

@@ -1,3 +1,7 @@
+.hero {
+  height: 100vh;
+}
+
 .hover_animation {
     position: relative;
     font-size: 3rem;
