@@ -45,6 +45,10 @@
     overflow: hidden
 }
 
+.skills__item:hover {
+    transform: scale(1.1)
+}
+
 @media (max-width: 1500px) {
     .skills__item {
         height:90px;
