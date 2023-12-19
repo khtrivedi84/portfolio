@@ -72,6 +72,12 @@
     }
   }
 
+  @media (max-width: 993px) {
+    .mobileTop {
+      margin-top: -20% !important;
+    }
+  }
+
   .scrollMore {
     height: 100px;
     width: 100px;
