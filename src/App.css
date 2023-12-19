@@ -2,3 +2,9 @@ body {
     background:url(./background-1.jpeg)!important;
     overflow-x: hidden;
 }
+
+@media (max-width: 574px) {
+    body {
+        display: flex;
+    }
+}

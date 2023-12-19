@@ -14,69 +14,69 @@ const AboutMe = () => {
   return (
     <div className={`container mt-4 justify-content-center`} style={{height:"100vh"}}>
         <div className="row justify-content-center text-white gx-5">
-            <div className="d-sm-none d-md-block col-md-6">
+            <div className="col-md-6">
                     <div className={styles.skills}>
                         <div className={styles.skills__row}>
-                        <div className={`${styles.skills__item} skills__item--html skills__item-fade-in`}>
+                        <div className={`${styles.skills__item} skills__item--html ${styles.skills__item_fade_in}`}>
                             <img src={htmlLogo} alt=""/>
-                            <div className="skills__item-name">
+                            <div className={`${styles.skills__item_name}`}>
                                 HTML
                             </div>
                         </div>
-                        <div class={`${styles.skills__item} skills__item--react skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--react ${styles.skills__item_fade_in}`}>
                             <img src={reactLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 REACT
                             </div>
                         </div>
-                        <div class={`${styles.skills__item} skills__item--npm skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--npm ${styles.skills__item_fade_in}`}>
                             <img src={dockerLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 DOCKER
                             </div>
                         </div>
                     </div><div class={styles.skills__row}>
-                        <div class={`${styles.skills__item} skills__item--js skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--js ${styles.skills__item_fade_in}`}>
                             <img src={jsLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 JAVASCRIPT
                             </div>
                         </div>
-                        <div class={`${styles.skills__item} skills__item--css skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--css ${styles.skills__item_fade_in}`}>
                             <img src={cssLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 CSS
                             </div>
                         </div>
-                        <div class={`${styles.skills__item} skills__item--python skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--python ${styles.skills__item_fade_in}`}>
                             <img src={mongodbLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 MONGODB
                             </div>
                         </div>
-                        <div class={`${styles.skills__item} skills__item--git skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--git ${styles.skills__item_fade_in}`}>
                             <img src={gitLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 GIT
                             </div>
                         </div>
                     </div>
                     <div class={styles.skills__row}>
-                        <div class={`${styles.skills__item} skills__item--sass skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--sass ${styles.skills__item_fade_in}`}>
                             <img src={pythonLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 PYTHON
                             </div>
                         </div>
-                        <div class={`${styles.skills__item} skills__item--webpack skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--webpack ${styles.skills__item_fade_in}`}>
                             <img src={djangoLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 DJANGO
                             </div>
                         </div>
-                        <div class={`${styles.skills__item} skills__item--r skills__item-fade-in`}>
+                        <div class={`${styles.skills__item} skills__item--r ${styles.skills__item_fade_in}`}>
                             <img src={flaskLogo} alt="" />
-                            <div class="skills__item-name">
+                            <div class={`${styles.skills__item_name}`}>
                                 FLASK
                             </div>
                         </div>
