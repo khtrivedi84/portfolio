@@ -139,3 +139,7 @@
     display:none !important;
   }
 }
+
+.buttonMargin {
+  top: -10px;
+}

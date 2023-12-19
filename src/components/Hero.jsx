@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
             </div>
             <div className={`${styles.scrollMoreMobile}`}>
-                <button className={`btn btn-primary  ${styles.scrollMore} `}>
+                <button className={`btn btn-primary  ${styles.scrollMore} ${styles.buttonMargin}`}>
                     Know More!
                     <div className={`position-absolute bottom-0 end-0  ${styles.bounceArrow}`}>
                         <FaArrowDown size={20} color="#fff" />
