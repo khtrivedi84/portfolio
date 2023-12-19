@@ -120,3 +120,22 @@
       transform: translateY(-5px);
   }
 }
+
+@media (min-width:993px) {
+  .scrollMoreDesktop {
+    display:block !important;
+  }
+  .scrollMoreMobile {
+    display:none !important;
+  }
+}
+
+@media (max-width:992px) {
+  .scrollMoreMobile {
+    display:flex !important;
+    flex-basis: content;
+  }
+  .scrollMoreDesktop {
+    display:none !important;
+  }
+}
