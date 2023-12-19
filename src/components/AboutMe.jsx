@@ -16,7 +16,7 @@ const AboutMe = () => {
         <div className="row justify-content-center text-white gx-5">
             <div className="col-sm-12 col-md-6 order-sm1 order-md-2">
                 <div className="about-me">
-                    <h2 className="about-me__title text-center">About Me</h2>
+                    <h2 className="about-me__title text-center" style={{marginTop:"10px"}}>About Me</h2>
                     <p className="about-me__text">
                         Hello! 👋 I'm a seasoned computer engineer with a passion for code and innovation, holding a Master's in Computer Science and Engineering from Santa Clara University. Proficient in Python, JavaScript, Data Structures, Algorithms, and various frameworks, I navigate the dynamic interplay between creativity and technology in web development.
                     </p>
