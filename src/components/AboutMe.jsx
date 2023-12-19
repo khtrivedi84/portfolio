@@ -12,7 +12,7 @@ import dockerLogo from "../docker_logo.png";
 
 const AboutMe = () => {
   return (
-    <div className={`container mt-4 justify-content-center`} style={{height:"100vh"}}>
+    <div id="aboutme" className={`container mt-4 justify-content-center`} style={{height:"100vh"}}>
         <div className="row justify-content-center text-white gx-5">
             <div className="col-sm-12 col-md-6 order-sm1 order-md-2">
                 <div className="about-me">

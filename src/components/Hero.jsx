@@ -18,21 +18,21 @@ const Hero = () => {
             <div style={{height:"75px"}}></div>
             <SocialMedia />
             <div className={`${styles.scrollMoreDesktop}`}>
-                <button className={`btn btn-primary  ${styles.scrollMore}`}>
-                    Know More!
+                <a href="#aboutme" className={`btn btn-primary  ${styles.scrollMore}`}>
+                    <span style={{position:"relative",top:"25%"}}>Know More!</span>
                     <div className={`position-absolute bottom-0 end-0  ${styles.bounceArrow}`}>
                         <FaArrowDown size={20} color="#fff" />
                     </div>
-                </button>
+                </a>
             </div>
             </div>
             <div className={`${styles.scrollMoreMobile}`}>
-                <button className={`btn btn-primary  ${styles.scrollMore} ${styles.buttonMargin}`}>
-                    Know More!
+                <a href="#aboutme" className={`btn btn-primary ${styles.scrollMore} ${styles.buttonMargin}`}>
+                    <span style={{position:'relative', top:"25%"}}>Know More!</span>
                     <div className={`position-absolute bottom-0 end-0  ${styles.bounceArrow}`}>
                         <FaArrowDown size={20} color="#fff" />
                     </div>
-                </button>
+                </a>
             </div>
             <div className="col-sm-3 d-none d-lg-block" style={{textAlign:"end"}}>
                 <img style={{height:"100vh"}} className={`${styles.hero_image}`} src={yourImage} alt="" />
