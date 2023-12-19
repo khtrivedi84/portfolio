@@ -9,8 +9,10 @@ function App() {
   return (
     <>
     <Header />
-    <Hero />
-    <AboutMe />
+    <div className={`container-fluid`}>
+      <Hero />
+      <AboutMe />
+    </div>
     </>
   );
 }
