@@ -1,4 +1,4 @@
-import yourImage from '../placeholder.png'; // Adjust the path accordingly
+import yourImage from '../images/placeholder.png'; // Adjust the path accordingly
 import SocialMedia from './SocialMedia';
 import styles from "./Hero.module.css"
 import { FaArrowDown } from 'react-icons/fa';

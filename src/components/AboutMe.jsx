@@ -1,19 +1,19 @@
 import styles from "./AboutMe.module.css";
-import htmlLogo from "../html_logo.png";
-import jsLogo from "../js_logo.png";
-import cssLogo from "../css_logo.png";
-import mongodbLogo from "../mongodb_logo.png";
-import reactLogo from "../react_logo.png";
-import gitLogo from "../git_logo.png";
-import pythonLogo from "../python_logo.png";
-import djangoLogo from "../django_logo.png";
-import flaskLogo from "../flask_logo.png";
-import dockerLogo from "../docker_logo.png";
+import htmlLogo from "../images/html_logo.png";
+import jsLogo from "../images/js_logo.png";
+import cssLogo from "../images/css_logo.png";
+import mongodbLogo from "../images/mongodb_logo.png";
+import reactLogo from "../images/react_logo.png";
+import gitLogo from "../images/git_logo.png";
+import pythonLogo from "../images/python_logo.png";
+import djangoLogo from "../images/django_logo.png";
+import flaskLogo from "../images/flask_logo.png";
+import dockerLogo from "../images/docker_logo.png";
 
 const AboutMe = () => {
   return (
     <div id="aboutme" className={`container mt-4 justify-content-center`} style={{height:"100vh"}}>
-        <div className="row justify-content-center text-white gx-5">
+        <div className="row justify-content-center align-item-center text-white gx-5">
             <div className="col-sm-12 col-md-6 order-sm1 order-md-2">
                 <div className="about-me">
                     <h2 className="about-me__title text-center" style={{marginTop:"10px"}}>About Me</h2>
