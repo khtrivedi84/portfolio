@@ -9,7 +9,7 @@ const Header = () => {
                 <a className={`navbar-brand mx-3 ${styles.profilePicture}`}>
                     <img src="https://placehold.co/50x50" alt="Profile" className="img-fluid rounded-circle d-md-block" width="50" height="50" />
                 </a>
-                <button className="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className={`navbar-toggler ${styles.navbarToggler} mx-2`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
