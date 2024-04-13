@@ -1,7 +1,6 @@
 body {
     /* background:url(./background-1.jpeg)!important; */
-    background: rgb(138,174,87);
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 19%, rgba(13,16,14,0.89) 50%, rgba(14,15,13,1) 95%);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 19%, rgba(13,16,14,0.89 ) 50%, rgba(14,15,13,1) 95%);
     overflow-x: hidden;
 }
 

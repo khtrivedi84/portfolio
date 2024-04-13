@@ -1,25 +1,67 @@
-// Adjustments in HeroCard.js - adding className to icons
 import React from 'react';
+import { useState } from 'react';
 import styles from './HeroCard.module.css'; // Ensure this is the correct path to your CSS module
-import backgroundImage from '../images/e_commerce.png'; // Ensure this is the correct path to your background image
-import { IoArrowForwardCircleSharp, IoArrowBackCircleSharp  } from "react-icons/io5";
-
+import backgroundImage1 from '../images/e_commerce.png';
+import backgroundImage2 from '../images/revisionai1.png';
+import backgroundImage3 from '../images/python_logo.png';
+import backgroundImage4 from '../images/js_logo.png';
+import { IoArrowForwardCircleSharp, IoArrowBackCircleSharp } from "react-icons/io5";
 const HeroCard = () => {
+  const [rotation, setRotation] = useState(0);  // State to manage the rotation of the cube
+
+  const handlePrevClick = () => {
+    // Rotate the cube to the previous image
+    setRotation(currentRotation => currentRotation - 90);
+  };
+
+  const handleNextClick = () => {
+    // Rotate the cube to the next image
+    setRotation(currentRotation => currentRotation + 90);
+  };
+
   return (
     <div className={styles.cardContainer}>
-      <div className={styles.card} style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <div className={styles.content}>
-          <h2 className={styles.title}>E-commerce platform</h2>
-          <p className={styles.description}>
-            An e-commerce site built using Python Django, SQLite, HTML, CSS, JavaScript, and Bootstrap.
-          </p>
+      <div className={styles.card}>
+        <div className={styles.cube} style={{ transform: `rotateY(${rotation}deg)` }}>
+          <div className={styles.front} style={{ backgroundImage: `url(${backgroundImage1})` }}>
+            <div className={styles.content} style={{ height: `auto`, marginTop:"93%"}}>
+              <h2 className={styles.title}>E-commerce platform</h2>
+              <p className={styles.description}>
+                An e-commerce site built using Python Django, SQLite, HTML, CSS, JavaScript, and Bootstrap.
+              </p>
+            </div>
+          </div>
+          <div className={styles.right} style={{ backgroundImage: `url(${backgroundImage2})` }}>
+          <div className={styles.content} style={{ height: `100px`, marginTop:"93%"}}>
+              <h2 className={styles.title}>RevisionAI</h2>
+              <p className={styles.description}>
+                An AI powered tool to summarize class recordings and do quick revision.
+              </p>
+            </div>
+          </div>
+          <div className={styles.back} style={{ backgroundImage: `url(${backgroundImage3})` }}>
+          <div className={styles.content} style={{ height: `100px`, marginTop:"93%"}}>
+              <h2 className={styles.title}>E-commerce platform</h2>
+              <p className={styles.description}>
+                An e-commerce site built using Python Django, SQLite, HTML, CSS, JavaScript, and Bootstrap.
+              </p>
+            </div>
+          </div>
+          <div className={styles.left} style={{ backgroundImage: `url(${backgroundImage4})` }}>
+          <div className={styles.content} style={{ height: `100px`, marginTop:"93.7%"}}>
+              <h2 className={styles.title}>E-commerce platform</h2>
+              <p className={styles.description}>
+                An e-commerce site built using Python Django, SQLite, HTML, CSS, JavaScript, and Bootstrap.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div className={styles.arrowLeft}>
-        <IoArrowBackCircleSharp size={30}  /> 
+      <div className={styles.arrowLeft} onClick={handlePrevClick}>
+        <IoArrowBackCircleSharp size={30} />
       </div>
-      <div className={styles.arrowRight}>
-        <IoArrowForwardCircleSharp size={30}  /> 
+      <div className={styles.arrowRight} onClick={handleNextClick}>
+        <IoArrowForwardCircleSharp size={30} />
       </div>
     </div>
   );
