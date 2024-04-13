@@ -1,0 +1,70 @@
+/* HeroCard.module.css */
+.cardContainer {
+    position: relative; /* Container to hold the card and arrows */
+}
+
+.card {
+    border-radius: 35px;
+    overflow: hidden;
+    height: 400px;
+    width: 320px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    position: relative; /* Ensure the card's position is relative for absolute positioning of arrows */
+}
+
+.content {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(32px);
+    mix-blend-mode: exclusion;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 0.7rem;
+}
+
+.arrowLeft,
+.arrowRight {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px; /* Half the height of the arrow for vertical centering */
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.arrowLeft {
+    left: -40px; /* Adjust as needed to position the arrow outside the card */
+}
+
+.arrowRight {
+    right: calc(-40px + 100% - 320px); /* Adjust as needed to position the arrow outside the card */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Make the card full width on smaller screens */
+        border-radius: 0; /* Remove border-radius on smaller screens */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .arrowLeft {
+        left: 10px; /* Adjust left position for smaller screens */
+    }
+
+    .arrowRight {
+        right: 10px; /* Adjust right position for smaller screens */
+    }
+}

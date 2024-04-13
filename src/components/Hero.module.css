@@ -143,3 +143,7 @@
 .buttonMargin {
   bottom: 25px;
 }
+
+.setMargin {
+  transform: translateX(-50%) !important;
+}
