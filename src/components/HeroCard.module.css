@@ -115,3 +115,12 @@
       }
   }
   
+  .container {
+    text-align: center;
+  }
+  
+  .viewAllProjects {
+    margin-top: 20px; /* Adjust margin-top as needed */
+    color: white;
+  }
+  
