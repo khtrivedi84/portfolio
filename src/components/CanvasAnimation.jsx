@@ -11,7 +11,7 @@ const CanvasAnimation = () => {
 
         let can_w = canvas.width;
         let can_h = canvas.height;
-        const BALL_NUM = 30;
+        const BALL_NUM = 25;
         const R = 2;
         let balls = [];
         let animationFrameId;
@@ -81,17 +81,24 @@ const CanvasAnimation = () => {
         }
 
         function updateBalls() {
-            balls = balls.filter(ball => {
+            balls.forEach(ball => {
+                // Update position based on velocity
                 ball.x += ball.vx;
                 ball.y += ball.vy;
-                if (ball.x > -50 && ball.x < can_w + 50 && ball.y > -50 && ball.y < can_h + 50) {
-                    ball.phase += 0.03;
-                    ball.alpha = Math.abs(Math.cos(ball.phase));
-                    return true;
-                }
-                return false;
+        
+                // Wrapping logic
+                if (ball.x < -R) ball.x = can_w + R;
+                else if (ball.x > can_w + R) ball.x = -R;
+        
+                if (ball.y < -R) ball.y = can_h + R;
+                else if (ball.y > can_h + R) ball.y = -R;
+        
+                // Update phase and alpha for visual effects
+                ball.phase += 0.03;
+                ball.alpha = Math.abs(Math.cos(ball.phase));
             });
         }
+        
 
         function renderLines() {
             balls.forEach((ball, index) => {
