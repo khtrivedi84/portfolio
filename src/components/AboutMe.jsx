@@ -21,13 +21,13 @@ const AboutMe = () => {
                         Hello! 👋 I'm a seasoned computer engineer with a passion for code and innovation, holding a Master's in Computer Science and Engineering from Santa Clara University. Proficient in Python, JavaScript, Data Structures, Algorithms, and various frameworks, I navigate the dynamic interplay between creativity and technology in web development.
                     </p>
                         <p className="about-me__text">
-                            Beyond the tech realm, catch me exploring the latest trends 🚀, enjoying a hike 🏞️, or uncovering hidden city gems. Whether tackling code challenges or blazing new trails, I'm always ready for an adventure.
+                            Beyond the tech realm, catch me exploring the latest trends, enjoying a hike 🏞️, or uncovering hidden city gems. Whether tackling code challenges or blazing new trails, I'm always ready for an adventure.
                         </p>
                         <p className={`about-me__text d-md-block ${styles.optionalPara}`}>
                             I have experience working with a variety of technologies, including Django, Flask, SQL, React, Redux, PostgreSQL, and more. I am always looking to learn new technologies and expand my skillset.
                         </p>
                     <p className="about-me__text">
-                        Let's connect and share stories—exploring the exciting journey where technology meets imagination. Ready to embark on this journey together? 🚀
+                        Let's connect and share stories—exploring the exciting journey where technology meets imagination. Ready to embark on this journey together?
                     </p>
                 </div>
             </div>

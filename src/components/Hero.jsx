@@ -34,6 +34,7 @@ const Hero = () => {
                 </motion.p>
                 <div style={{height:"75px"}}></div>
                 <SocialMedia />
+            
             </motion.div>
             <motion.div 
                 className={`${styles.scrollMoreMobile}`}
@@ -55,6 +56,20 @@ const Hero = () => {
                 transition={{ delay: 1.2, duration: 0.5 }}
             >
                 <Card />
+            </motion.div>
+                
+            <motion.div 
+                className={`${styles.scrollMoreDesktop}`}
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.5 }}
+            >
+                <a href="#aboutme" className={`${styles.scrollMore} ${styles.buttonMargin}`}>
+                    <div className={`position-absolute bottom-0 end-0  ${styles.bounceArrow}`}>
+                        <FaArrowDown size={20} color="#fff" />
+                    </div>
+                    <span style={{position:'relative', top:"25%", display:"flex", justifyContent:"center"}}>Know More!</span>
+                </a>
             </motion.div>
         </div>
     )

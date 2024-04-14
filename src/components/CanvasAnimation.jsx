@@ -22,14 +22,24 @@ const CanvasAnimation = () => {
             b: 4
         };
 
+        // Defined with initial position offscreen to prevent flash of unstyled content
         const mouse_ball = {
-            x: 0,
-            y: 0,
+            x: -100,
+            y: -100,
             vx: 0,
             vy: 0,
             r: R,
+            alpha: 1,
+            phase: 0,
             type: 'mouse'
         };
+
+        balls.push(mouse_ball); // This keeps the mouse_ball always in the array
+
+        function handleMouseMove(event) {
+            mouse_ball.x = event.clientX;
+            mouse_ball.y = event.clientY;
+        }
 
         function randomNumFrom(min, max) {
             return Math.random() * (max - min) + min;
@@ -82,23 +92,19 @@ const CanvasAnimation = () => {
 
         function updateBalls() {
             balls.forEach(ball => {
-                // Update position based on velocity
                 ball.x += ball.vx;
                 ball.y += ball.vy;
         
-                // Wrapping logic
                 if (ball.x < -R) ball.x = can_w + R;
                 else if (ball.x > can_w + R) ball.x = -R;
         
                 if (ball.y < -R) ball.y = can_h + R;
                 else if (ball.y > can_h + R) ball.y = -R;
         
-                // Update phase and alpha for visual effects
                 ball.phase += 0.03;
                 ball.alpha = Math.abs(Math.cos(ball.phase));
             });
         }
-        
 
         function renderLines() {
             balls.forEach((ball, index) => {
@@ -123,19 +129,6 @@ const CanvasAnimation = () => {
             }
         }
 
-        function handleMouseMove(event) {
-            mouse_ball.x = event.clientX;
-            mouse_ball.y = event.clientY;
-        }
-
-        function handleMouseEnter() {
-            balls.push(mouse_ball);
-        }
-
-        function handleMouseLeave() {
-            balls = balls.filter(ball => ball !== mouse_ball);
-        }
-
         function handleResize() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -155,14 +148,10 @@ const CanvasAnimation = () => {
         animate();
 
         canvas.addEventListener('mousemove', handleMouseMove);
-        canvas.addEventListener('mouseenter', handleMouseEnter);
-        canvas.addEventListener('mouseleave', handleMouseLeave);
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            canvas.removeEventListener('mouseenter', handleMouseEnter);
-            canvas.removeEventListener('mouseleave', handleMouseLeave);
             canvas.removeEventListener('mousemove', handleMouseMove);
             cancelAnimationFrame(animationFrameId);
         };
