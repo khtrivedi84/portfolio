@@ -14,11 +14,12 @@ const Header = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className={`navbar-nav nav-pills justify-content-center w-100 ${styles.headerBackground}`}>
-                        <li className="nav-item"><Link to="#" className={`nav-link ${styles.customNavLink}`}>About</Link></li>
-                        <li className="nav-item"><Link to="#" className={`nav-link ${styles.customNavLink}`}>Skills</Link></li>
-                        <li className="nav-item"><Link to="#" className={`nav-link ${styles.customNavLink}`}>Projects</Link></li>
-                        <li className="nav-item"><Link to="https://github.com/kishan12345" className={`nav-link ${styles.customNavLink}`}>Contact Me</Link></li>
-                        <li className="nav-item"><Link to="https://www.linkedin.com/in/kishantrivediscu/" className={`nav-link ${styles.customNavLink}`}>LinkedIn</Link></li>
+                        <a href="#aboutme" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">About</li></a>
+                        <a href="#skills" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">Skills</li></a>
+                        <a href="#projects" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">Projects</li></a>
+                        <a href="#contact" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">Contact Me</li></a>
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/khtrivedi/" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">LinkedIn</li></a>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/khtrivedi84" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">GitHub</li></a>
                         <li className="nav-item"><Link to="" className={`nav-link ${styles.resumeBtn}`}>Resume <IoCloudDownloadOutline /></Link></li>
                     </ul>
                 </div>

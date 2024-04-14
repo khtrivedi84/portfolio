@@ -28,6 +28,8 @@
 .setPadding {
     padding-left: 10px;
     padding-right: 4px;
+    /* position: fixed; */
+    width: 100%;
 }
 
 @media (max-width: 992px) {

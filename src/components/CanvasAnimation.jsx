@@ -11,7 +11,7 @@ const CanvasAnimation = () => {
 
         let can_w = canvas.width;
         let can_h = canvas.height;
-        const BALL_NUM = 25;
+        const BALL_NUM = 15;
         const R = 2;
         let balls = [];
         let animationFrameId;
