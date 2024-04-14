@@ -20,7 +20,7 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                    <h1 data-text="I'm Kishan Trivedi" className={styles.h1_element}></h1>
+                    <h1 data-text="Hi, I'm Kishan Trivedi" className={styles.h1_element}></h1>
                 </motion.div>
                 <div className={`mt-4 ${styles.mobileMargin}`} style={{height:"75px"}}></div>
                 <motion.p 
@@ -30,7 +30,7 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.8 }}
                 >
-                    Software Engineer | Web Developer | AI and ML
+                    Software Engineer | Web Developer | AI and ML Enthusiast
                 </motion.p>
                 <div style={{height:"75px"}}></div>
                 <SocialMedia />
