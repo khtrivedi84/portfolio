@@ -228,6 +228,10 @@
         height: 14.9rem;
         width: 11.1rem;
     }
+
+    .aboutMeMobile {
+        align-items: flex-start !important;
+    }
 }
 
 @media (max-width: 500px) {
@@ -238,5 +242,9 @@
     .profileImage {
         height: 9.9rem;
         width: 7.1rem;
+    }
+
+    .aboutMeMobile {
+        align-items: flex-start !important;
     }
 }
