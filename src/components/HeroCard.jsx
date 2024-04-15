@@ -80,7 +80,7 @@ const HeroCard = () => {
           <IoArrowForwardCircleSharp size={30} />
         </div>
       </div>
-      <p className={`${styles.viewAllProjects} my-3`}>View all projects <FaLongArrowAltRight /></p>
+      <p className={`${styles.viewAllProjects} my-3`}><a style={{textDecoration:"none", color:"white"}} href="#projects">View all projects <FaLongArrowAltRight /></a></p>
     </div>
   );
 }
