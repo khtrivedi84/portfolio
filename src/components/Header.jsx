@@ -10,16 +10,16 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 50;
+            console.log(`Scrolled: ${isScrolled}`); // This will log true or false based on your scroll position
             setScrolled(isScrolled);
         };
-
+    
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    
     return(
         <center>
         <nav className={`navbar navbar-expand-lg ${styles.setPadding} ${scrolled ? styles.scrolled : ''}`}>
@@ -30,7 +30,7 @@ const Header = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className={`navbar-nav nav-pills justify-content-center w-100 ${styles.headerBackground}`}>
+                    <ul className={`navbar-nav nav-pills justify-content-center w-100 ${styles.headerBackground} ${styles.new_ul}`}>
                         <a href="#aboutme" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">About</li></a>
                         <a href="#skills" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">Skills</li></a>
                         <a href="#projects" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item">Projects</li></a>

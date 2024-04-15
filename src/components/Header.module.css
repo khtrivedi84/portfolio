@@ -57,14 +57,27 @@
 @media (max-width: 992px) {
     .setPadding {
         position: fixed; /* Adjust position so it doesn't overlap content */
-        background: white; /* Linear gradient background */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        opacity: 0.9; /* Slightly transparent background */
+        background: transparent; /* Transparent background initially */
+        opacity: 1; /* Full opacity */
+    }
+
+    .new_ul {
+        background-color: white;
+        
+    }
+
+    .scrolled .setPadding {
+        background-color: white; /* White background when scrolled */
+        opacity: 0.9; /* Slightly transparent for a soft effect */
+    }
+
+    .scrolled {
+        background-color: #fff; /* Light background on scroll */
+        color: #000; /* Dark text on scroll */
     }
 
     .customNavLink {
-        color: #000 !important; /* Dark text color */
+        color: #000 !important; /* Dark text color when scrolled */
     }
     .headerBackground {
         /* background: linear-gradient(to right, black, white); Darker gradient background */
@@ -86,6 +99,11 @@
     }
 }
 
+@media (max-width: 992px) {
+    .resumeBtn {
+        color: black !important; /* Dark text color */
+    }
+}
 /* Resume button specific styles */
 .resumeBtn {
     background: none; /* No initial background gradient */
