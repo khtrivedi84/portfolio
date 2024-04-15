@@ -60,8 +60,12 @@
         background: white; /* Linear gradient background */
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        opacity: 0.9; /* Slightly transparent background */
     }
 
+    .customNavLink {
+        color: #000 !important; /* Dark text color */
+    }
     .headerBackground {
         /* background: linear-gradient(to right, black, white); Darker gradient background */
         border-bottom-left-radius: 10px;
@@ -74,6 +78,7 @@
         position: absolute; /* Position absolute to cover the content below */
         width: 100%; /* Full width to cover side spaces */
         border-radius: 0; /* Optional, depending on your design */
+        color: #000;
     }
 
     .navbar-toggler {
