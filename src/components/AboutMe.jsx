@@ -22,9 +22,11 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div id="aboutme" className={`${styles.centerDiv} ${styles.aboutMeMobile} container`}>
+    <div id="aboutme" className={`${styles.centerDiv} ${styles.aboutMeMobile} container d-block`}>
+        <div>
+        <h2 className="about-me__title text-center text-light" style={{padding:"8%", color:"white"}}>About Me</h2>
+        </div>
         <div className={`row justify-content-center align-items-center text-white`}>
-            <h2 className="about-me__title text-center" style={{marginTop:"10%"}}>About Me</h2>
             <div className="col-md-6 justify-content-center d-flex mb-4 ">
                 <div className={`${styles.imageDiv} ${styles.glowingBorder}`}>
                     <img src={profile} alt="HTML" className={`${styles.profileImage}`} />
