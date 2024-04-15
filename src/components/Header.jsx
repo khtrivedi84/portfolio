@@ -2,12 +2,28 @@ import { Link } from "react-router-dom";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import styles from './Header.module.css';
 import profile from "../images/logo.png";
+import { useEffect, useState } from 'react';
 
 const Header = () => {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 50;
+            setScrolled(isScrolled);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return(
         <center>
-        <nav className={`navbar navbar-expand-lg ${styles.setPadding}`}>
-                <a className={`navbar-brand mx-3 ${styles.profilePicture}`}>
+        <nav className={`navbar navbar-expand-lg ${styles.setPadding} ${scrolled ? styles.scrolled : ''}`}>
+                <a href="/" className={`navbar-brand mx-3 ${styles.profilePicture}`}>
                     <img src={profile} alt="Profile" className="img-fluid rounded-circle d-md-block" style={{borderRadius:"50%", height:"38px", width:"40px"}} />
                 </a>
                 <button className={`navbar-toggler ${styles.navbarToggler} mx-2`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

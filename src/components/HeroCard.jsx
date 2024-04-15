@@ -6,12 +6,11 @@ import backgroundImage3 from '../images/covid_detector.png';
 import backgroundImage4 from '../images/comic_generator.png';
 import { IoArrowForwardCircleSharp, IoArrowBackCircleSharp } from "react-icons/io5";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const HeroCard = () => {
   const [rotation, setRotation] = useState(0); // State to manage the rotation of the cube
   const [isRotating, setIsRotating] = useState(true); // State to control automatic rotation
-
+  
   useEffect(() => {
     // Start automatic rotation when component mounts
     const interval = setInterval(() => {

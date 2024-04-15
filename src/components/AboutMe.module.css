@@ -229,9 +229,6 @@
         width: 11.1rem;
     }
 
-    .aboutMeMobile {
-        align-items: flex-start !important;
-    }
 }
 
 @media (max-width: 500px) {

@@ -6,7 +6,7 @@ import Card from './HeroCard';
 
 const Hero = () => {
     return(
-        <div className={`row justify-content-center align-items-center`} style={{height:"100vh"}}>
+        <div className={`row justify-content-center align-items-center`} style={{height:"100vh", transform:"translateY(15%)"}}>
             <motion.div 
                 className={`col-sm-10 col-md-9 text-light text-center position-relative ${styles.mobileTop}`}
                 initial={{ opacity: 0, y: 30 }}

@@ -51,9 +51,9 @@ const cardVariants = {
 
 const Projects = () => {
   return (
-    <div id="projects" className={`row justify-content-center ${styles.projectsContainer}`}>
-      <h2 className={`text-center mt-4 text-light`}>Projects</h2>
+    <div id="projects" className={`container justify-content-center mt-4 ${styles.projectsContainer}`}>
       <div className={`row ${styles.cardsRow}`}>
+      <h2 className={`text-center mt-4 text-light`}>Projects</h2>
         {projectList.map((project) => (
           <motion.div
             key={project.id}
