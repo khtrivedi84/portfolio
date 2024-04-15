@@ -25,7 +25,7 @@ const AboutMe = () => {
     <div id="aboutme" className={`${styles.centerDiv} container`}>
         <div className="row justify-content-center align-items-center text-white">
             <h2 className="about-me__title text-center" style={{marginTop:"-5%"}}>About Me</h2>
-            <div className="col-md-6 justify-content-center d-flex mb-4">
+            <div className="col-md-6 justify-content-center d-none d-md-flex mb-4 ">
                 <div className={`${styles.imageDiv} ${styles.glowingBorder}`}>
                     <img src={profile} alt="HTML" className={`${styles.profileImage}`} />
                 </div>
