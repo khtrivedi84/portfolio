@@ -1,7 +1,9 @@
 .wrapper {
     display: inline-flex;
+    flex-wrap: wrap;
     list-style: none;
     padding-left: 0px !important;
+    justify-content: center;
   }
   
   .wrapper .icon {
