@@ -5,13 +5,14 @@ import e_commerce from '../images/e_commerce.png';
 import revisionAi from '../images/revisionai1.png';
 import covid_detector from '../images/covid_detector.png';
 import comic_generator from '../images/comic_generator.png';
-import { FaPython, FaHtml5, FaBootstrap, FaCss3Alt, FaAws, FaDocker, FaEye  } from "react-icons/fa";
+import { FaPython, FaHtml5, FaBootstrap, FaCss3Alt, FaAws, FaDocker, FaEye } from "react-icons/fa";
 import { SiDjango, SiSqlite, SiFlask, SiCelery, SiKeras, SiTensorflow, SiNumpy, SiJupyter, SiGooglecolab } from "react-icons/si";
-import { IoLogoJavascript} from "react-icons/io5";
+import { IoLogoJavascript } from "react-icons/io5";
 import { TbApi } from "react-icons/tb";
 import { RiOpenaiFill } from "react-icons/ri";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { IoIosColorPalette } from "react-icons/io";
+
 
 const projectList = [
   {
@@ -73,7 +74,7 @@ const Projects = () => {
             <div className={`${styles.cardImageContainer}`}>
               <img src={project.imageUrl} alt={project.title} className={styles.cardImage} />
               <div className={styles.overlay_card}>
-                  <FaEye  className={styles.overlayIcon} />
+                  <FaEye  className={`${styles.overlayIcon} d-none d-lg-block`} />
                   <div className={styles.lBorderTopLeft}></div>
                   <div className={styles.lBorderBottomRight}></div>
               </div>
