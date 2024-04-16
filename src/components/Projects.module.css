@@ -15,13 +15,13 @@
   .card {
     display: flex;
     flex-direction: column;
-    background-color: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 19%, rgba(13,16,14,0.89 ) 50%, rgba(14,15,13,1) 95%);;
+    background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.5);
     margin-bottom: 1rem;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    max-height: 560px;
+    max-height: 397px;
     max-width: 370px;
     color: #ffffff;
   }
@@ -36,15 +36,12 @@
   
   .cardImage {
     width: 100%;
-    height: 50%;
+    height: 66%;
     display: block;
     transition: transform 0.3s ease-in-out;
     padding-top: 14px;
   }
   
-  .cardImage:hover {
-    transform: scale(1.1);
-  }
   
   .cardBody {
     padding: 1rem;
@@ -54,34 +51,36 @@
   .cardTitle {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: #000000;
   }
   
   .cardPeriod {
     font-size: 0.875rem;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 0.5rem;
   }
   
   .cardDescription {
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
+    color: black;
   }
   
   .cardTechnologies {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 22px;
+    margin-top: 15px;
   }
   
   .techBadge {
     border-radius: 1rem;
     background-color: #ffffff;
     color: black;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     padding: 0.25rem 0.5rem;
     font-size: 0.67rem;
+
   }
   
   @media (max-width: 1200px) {

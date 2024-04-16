@@ -66,8 +66,7 @@ const Projects = () => {
             </div>
             <div className={styles.cardBody}>
               <h5 className={styles.cardTitle}>{project.title}</h5>
-              <p className={styles.cardPeriod}>{project.period}</p>
-              <p className={styles.cardDescription}>{project.description}</p>
+              {/* <p className={styles.cardDescription}>{project.description}</p> */}
               <div className={styles.cardTechnologies}>
                 {project.technologies.map((tech, index) => (
                   <span key={index} className={styles.techBadge}>{tech}</span>
