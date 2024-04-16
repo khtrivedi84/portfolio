@@ -48,13 +48,35 @@ const projectList = [
     description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
     technologies: [['Python', <FaPython />], ['Jupyter', <SiJupyter />], ['StableDiffusion', <IoIosColorPalette />], ['Colab', <SiGooglecolab />], ['AI', <GiArtificialIntelligence />], ['OpenAI', <RiOpenaiFill />]],
     imageUrl: comic_generator, // Replace with your image path
+  },
+  {
+    id: 1,
+    title: 'Covid Detection',
+    period: 'Feb 2024 - Mar 2024',
+    description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
+    technologies: [['Python', <FaPython />], ['Flask', <SiFlask/>], ['Keras', <SiKeras/>], ['TensorFlow', <SiTensorflow/>], ['NumPy', <SiNumpy />], ['OpenAI', <RiOpenaiFill />], ['HTML', <FaHtml5 />
+  ], ['CSS', <FaCss3Alt/>], ['JavaScript', <IoLogoJavascript />]],
+    imageUrl: covid_detector, // Replace with your image path
+  },
+  {
+    id: 1,
+    title: 'E-commerce platform',
+    period: 'Feb 2024 - Mar 2024',
+    description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
+    technologies: [['Python', <FaPython />], ['Django', <SiDjango/>], ['HTML', <FaHtml5 />
+  ], ['CSS', <FaCss3Alt/>], ['JavaScript', <IoLogoJavascript />], ['SQLite', <SiSqlite/>], ['Bootstrap', <FaBootstrap/>], ['Celery', <SiCelery/>]],
+    imageUrl: e_commerce, // Replace with your image path
   }
   // ... more projects
 ];
 
 const cardVariants = {
   hover: {
-    scale: 1.05
+    translateY: -15,
+    boxShadow: '0px 10px 20px rgba(255, 255, 255, 0.3)',
+    transition: {
+      duration: 0,
+    },
   }
 };
 
@@ -66,20 +88,21 @@ const Projects = () => {
         {projectList.map((project) => (
           <motion.div
             key={project.id}
-            className={`col-lg-3 col-md-4 col-sm-6 ${styles.card}`}
+            className={`col-lg-3 col-md-4 col-sm-6 ${styles.card}  mx-md-3`}
             variants={cardVariants}
             whileHover="hover"
           >
-            <div className={styles.cardImageContainer}>
+            <div className={`${styles.cardImageContainer}`}>
               <img src={project.imageUrl} alt={project.title} className={styles.cardImage} />
             </div>
             <div className={styles.cardBody}>
               <h5 className={styles.cardTitle}>{project.title}</h5>
-              <div className={styles.cardTechnologies}>
+              <p className={styles.cardDescription}>{project.description}</p>
+              {/* <div className={styles.cardTechnologies}>
                 {project.technologies.map((tech, index) => (
                   <span key={index} className={`${styles.techBadge} ${styles[tech[0]]}`}>{tech[1]} {tech[0]}</span>
                 ))}
-              </div>
+              </div> */}
             </div>
           </motion.div>
         ))}

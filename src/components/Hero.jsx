@@ -48,14 +48,14 @@ const Hero = () => {
                     </div>
                 </a>
             </motion.div>
-            <motion.div 
+            {/* <motion.div 
                 className={`col-sm-3 d-none d-lg-block ${styles.setMargin}`}
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.5 }}
             >
                 <Card />
-            </motion.div>
+            </motion.div> */}
                 
             <motion.div 
                 className={`${styles.scrollMoreDesktop}`}
