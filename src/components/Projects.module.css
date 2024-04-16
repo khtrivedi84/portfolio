@@ -26,6 +26,7 @@
   }
   
   .cardImageContainer {
+    position: relative;
     width: 100%;
     overflow: hidden;
     display: contents;
@@ -209,3 +210,29 @@
   .StableDiffusion::before {
     background-color: #003B57;
   }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    border-radius: 20px;
+  }
+  
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlayIcon {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  
