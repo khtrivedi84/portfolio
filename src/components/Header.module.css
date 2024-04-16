@@ -15,20 +15,20 @@
 
 /* Styling when the page is scrolled */
 .scrolled {
-    background-color: #fff; /* Light background on scroll */
-    color: #000; /* Dark text on scroll */
+    background-color: #1C1E1C; /* Light background on scroll */
+    color: white; /* Dark text on scroll */
 }
 
 /* Ensure all links and toggler are visible against light background when scrolled */
 .scrolled .customNavLink, .scrolled .navbarToggler {
-    color: #000 !important;
+    color: #FFFFFF !important;
 }
 
 /* Initial styles for navbar links */
 .customNavLink {
     position: relative;
     color: white !important; /* Initial text color */
-    margin: 8px 18px;
+    margin: 8px 12px;
 }
 
 .customNavLink::before {
@@ -44,7 +44,7 @@
 
 .customNavLink:hover::before {
     width: 100%;
-    background-color: #000; /* Color change on hover */
+    background-color: white; /* Color change on hover */
     transition-delay: 0.1s;
 }
 

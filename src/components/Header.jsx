@@ -44,9 +44,6 @@ const Header = () => {
                         <a href="#experience" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaSuitcase /> Experience</li></a>
                         <a href="#education" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaGraduationCap /> Education</li></a>
                         <a href="#contact" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><IoMdContact /> Contact Me</li></a>
-                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/khtrivedi/" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaLinkedin /> LinkedIn</li></a>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/khtrivedi84" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaGithub /> GitHub</li></a>
-                        <li className="nav-item"><Link to="" className={`nav-link ${styles.resumeBtn}`}>Resume <IoCloudDownloadOutline /></Link></li>
                     </ul>
                 </div>
         </nav>

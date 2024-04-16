@@ -1,5 +1,5 @@
 import styles from "./SocialMedia.module.css"
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaDownload} from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
@@ -22,6 +22,12 @@ const SocialMedia = () => {
             <li className={`${styles.icon} ${styles.gmail}`}>
                 <span className={`${styles.tooltip}`}>Gmail</span>
                 <span style={{color:"black"}}><SiGmail /></span>
+            </li>
+            </a>
+            <a target="_blank" rel="noreferrer" href="#" style={{textDecoration:"none"}}>
+            <li className={`${styles.icon2} ${styles.resume}`}>
+                <span className={`${styles.tooltip}`}>Resume</span>
+                <span className={`${styles.resumeButton}`} style={{color:"black"}}>Check Resume {'\u00A0'}<FaDownload /></span>
             </li>
             </a>
         </ul>

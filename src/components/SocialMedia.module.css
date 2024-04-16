@@ -21,6 +21,28 @@
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
+
+  .wrapper .icon2 {
+    position: relative;
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .resumeButton {
+    text-decoration: none;
+  }
   
   .wrapper .tooltip {
     position: absolute;
@@ -79,6 +101,13 @@
   .wrapper .gmail:hover .tooltip,
   .wrapper .gmail:hover .tooltip::before {
     background: #C52220;
+    color: #ffffff;
+  }
+
+  .wrapper .resume:hover,
+  .wrapper .resume:hover .tooltip,
+  .wrapper .resume:hover .tooltip::before {
+    background: grey;
     color: #ffffff;
   }
   
