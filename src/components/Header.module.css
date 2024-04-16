@@ -28,7 +28,7 @@
 .customNavLink {
     position: relative;
     color: white !important; /* Initial text color */
-    margin: 8px 0;
+    margin: 8px 18px;
 }
 
 .customNavLink::before {
