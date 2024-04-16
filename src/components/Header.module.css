@@ -62,8 +62,8 @@
     }
 
     .new_ul {
-        background-color: white;
-        
+        background-color: #1C1E1C;
+        color: white;
     }
 
     .scrolled .setPadding {
@@ -72,12 +72,12 @@
     }
 
     .scrolled {
-        background-color: #fff; /* Light background on scroll */
-        color: #000; /* Dark text on scroll */
+        background-color: #1C1E1C; /* Light background on scroll */
+        color: #FFFFFF; /* Dark text on scroll */
     }
 
     .customNavLink {
-        color: #000 !important; /* Dark text color when scrolled */
+        color: #FFFFFF !important; /* Dark text color when scrolled */
     }
     .headerBackground {
         /* background: linear-gradient(to right, black, white); Darker gradient background */
