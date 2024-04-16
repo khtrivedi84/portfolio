@@ -66,13 +66,13 @@ const Projects = () => {
         {projectList.map((project) => (
           <motion.div
             key={project.id}
-            className={`col-lg-3 col-md-4 col-sm-6 ${styles.card} mx-md-3`}
+            className={`col-lg-3 col-md-4 col-sm-6 ${styles.card2} mx-md-3`}
             variants={cardVariants}
             whileHover="hover"
           >
             <div className={`${styles.cardImageContainer}`}>
               <img src={project.imageUrl} alt={project.title} className={styles.cardImage} />
-              <div className={styles.overlay}>
+              <div className={styles.overlay_card}>
                   <FaEye  className={styles.overlayIcon} />
                   <div className={styles.lBorderTopLeft}></div>
                   <div className={styles.lBorderBottomRight}></div>
