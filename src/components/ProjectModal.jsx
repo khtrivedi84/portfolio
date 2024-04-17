@@ -1,5 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
+import Carousel from 'react-bootstrap/Carousel';
+import e_commerce from '../images/e_commerce.png';
 import { FaPython, FaHtml5, FaCss3Alt, FaBootstrap, FaAws, FaDocker, FaGithub } from "react-icons/fa";
 import { SiDjango, SiSqlite, SiFlask, SiCelery, SiKeras, SiTensorflow, SiNumpy, SiJupyter, SiGooglecolab } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -35,7 +37,7 @@ const tech_map = {
 };
 
 const ProjectModal = ({ isOpen, closeModal, project }) => {
-  if (!project) return null;
+  if (!project) return null; // Return null if there is no project data.
 
   return (
     <Modal
@@ -56,6 +58,41 @@ const ProjectModal = ({ isOpen, closeModal, project }) => {
           <span key={index} className={`${styles[tech]} ${styles.techBadge}`}>{tech_map[tech]} {tech}{'\u00A0'}</span>
         ))}
       </div>
+      <Carousel style={{display:"contents !important"}}>
+        <Carousel.Item>
+          <img
+            className={`d-block w-100 ${styles.carouselImage}`}
+            src={e_commerce} 
+            alt="First slide" // Corrected to 'alt' from 'text'
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className={`d-block w-100 ${styles.carouselImage}`}
+            src={e_commerce} 
+            alt="Second slide"
+          />
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className={`d-block w-100 ${styles.carouselImage}`}
+            src={e_commerce} 
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </Modal>
   );
 };
