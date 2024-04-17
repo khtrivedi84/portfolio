@@ -15,14 +15,13 @@
   .card2 {
     display: flex;
     flex-direction: column;
-    /* background: radial-gradient(circle at center, #2c2c2c 0%, #1a1a1a 100%); */
-    /* border-radius: 20px; */
     margin-bottom: 1rem;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     max-height: 446px;
     max-width: 400px;
     color: #ffffff;
+    border-radius: 18px;
   }
   
   .cardImageContainer {
@@ -74,17 +73,7 @@
     margin-top: 15px;
   }
   
-  .techBadge {
-    border-radius: 1rem;
-    background-color: #ffffff;
-    color: black;
-    /* border: 1px solid #000000; */
-    padding: 0.25rem 0.5rem;
-    font-size: 0.70rem;
-    font-weight: bold;
 
-  }
-  
   @media (max-width: 1200px) {
     .card2 {
       flex: 0 0 calc(33.333% - 1rem);
@@ -102,116 +91,7 @@
       flex: 0 0 100%;
     }
   }
-  
-  .Python, .Django, .JavaScript, .SQLite, .HTML, .CSS, .Bootstrap, .Flask, .API, .AWS, .Docker, .OpenAI, .Celery, .AI, .Keras, .TensorFlow, .NumPy, .Jupyter, .StableDiffusion, .Colab{
-    position: relative;
-    color: white;
-    z-index: 1;
-  }
 
-  .JavaScript{
-    color: black;
-  }
-
-  .OpenAI {
-    border: 1px solid black;
-    color: black;
-  }
-
-  .Python::before, .Django::before, .JavaScript::before, .SQLite::before, .HTML::before, .CSS::before, 
-  .Bootstrap::before, .Flask::before, .API::before, .AWS::before, .Docker::before, .OpenAI::before, .Celery::before, 
-  .AI::before, .Keras::before, .TensorFlow::before, .NumPy::before, .Jupyter::before, .Colab::before, .StableDiffusion::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      filter: blur(3.2px);
-      z-index: -1;
-      border-radius: 1rem;
-  }
-
-  .Colab::before {
-    background-color: #F9AB00;
-  }
-  .Python::before {
-      background-color: #366B98;
-  }
-
-  .Django::before {
-      background-color: #092D1F;
-  }
-
-  .JavaScript::before {
-      background-color: #F0DB4F;
-  }
-
-  .SQLite::before {
-      background-color: #003B57;
-  }
-
-  .HTML::before {
-      background-color: #E34F26;
-  }
-
-  .CSS::before {
-    background-color: #264DE4;
-  }
-
-  .Bootstrap::before {
-    background-color: #7952B3;
-  }
-
-  .Flask::before {
-    background-color: #000000;
-  }
-
-  .API::before {
-    background-color: #FF6C37;
-  }
-
-  .AWS::before {
-    background-color: #FF9900;
-  }
-
-  .Docker::before {
-    background-color: #0DB7ED;
-  }
-
-  .OpenAI::before {
-    background-color: #FFFFFF;
-  }
-
-  .Celery::before {
-    background-color: #B0D761;
-  }
-
-  .AI::before {
-    background-color: #FF6C37;
-  }
-
-  .Keras::before {
-    background-color: #D00000;
-  }
-
-  .TensorFlow::before {
-    background-color: #FF6F00;
-  }
-
-  .NumPy::before {
-    background-color: #013243;
-  }
-
-  .Jupyter::before {
-    background-color: #F37626;
-  }
-
-  .StableDiffusion::before {
-    background-color: #003B57;
-  }
-
-  
   @media (min-width: 992px) {
     
    .overlay_card {
@@ -226,12 +106,11 @@
     justify-content: center;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
-    /* border-radius: 20px; */
     transform: translateX(-10px);
+    border-radius: 18px;
   }
     .card2:hover .overlay_card {
       opacity: 1;
-      background: rgba(0, 0, 0, 0.4);
     }
     .overlayIcon {
       color: white;

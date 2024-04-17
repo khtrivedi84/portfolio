@@ -1,10 +1,6 @@
-import { Link } from "react-router-dom";
-import { IoCloudDownloadOutline } from "react-icons/io5";
 import styles from './Header.module.css';
 import profile from "../images/logo.png";
 import { useEffect, useState } from 'react';
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 import { IoMdContact } from "react-icons/io";
 import { FaCode } from "react-icons/fa";
 import { FaCodeBranch } from "react-icons/fa";
@@ -17,7 +13,6 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 50;
-            console.log(`Scrolled: ${isScrolled}`); // This will log true or false based on your scroll position
             setScrolled(isScrolled);
         };
     
