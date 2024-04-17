@@ -50,29 +50,6 @@ const ProjectModal = ({ isOpen, closeModal, project }) => {
           <span key={index} className={`${styles[tech]} ${styles.techBadge}`}>{tech_map[tech]} {tech}</span>
         ))}
       </div>
-      <Carousel style={{ height: carouselHeight }}>
-        <Carousel.Item>
-          <img
-            className={`d-block w-100 ${styles.carouselImage}`}
-            src={e_commerce}
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className={`d-block w-100 ${styles.carouselImage}`}
-            src={e_commerce}
-            alt="Second slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className={`d-block w-100 ${styles.carouselImage}`}
-            src={e_commerce}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-      </Carousel>
     </Modal>
   );
 };
