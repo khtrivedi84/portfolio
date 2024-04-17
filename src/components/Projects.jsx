@@ -3,6 +3,14 @@ import styles from './Projects.module.css';
 import { motion } from 'framer-motion';
 import ProjectModal from './ProjectModal';
 import e_commerce from '../images/e_commerce.png';
+import e_commerce_landing from '../images/e_commerce/landing.png';
+import item_description from '../images/e_commerce/item_description.png';
+import home_items from '../images/e_commerce/home_items.png';
+import login from '../images/e_commerce/login.png';
+import e_commerce_user_profile from '../images/e_commerce/e_commerce_user_profile.png';
+import cart from '../images/e_commerce/cart.png';
+import shop from '../images/e_commerce/shop.png';
+import payment from '../images/e_commerce/payment.png';
 import revisionAi from '../images/revisionai1.png';
 import covid_detector from '../images/covid_detector.png';
 import comic_generator from '../images/comic_generator.png';
@@ -17,7 +25,8 @@ const projectList = [
     short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
     long_description: 'An e-commerce website built using Python Django that allows users to purchase shoes of different brands. It includes all the basic functionalities of an e-commerce project, providing a seamless shopping experience for users.',
     technologies: ['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'SQLite', 'Bootstrap', 'Celery'],
-    images: [e_commerce, revisionAi, covid_detector, comic_generator],
+    thumbnail: e_commerce,
+    images: [e_commerce_landing, home_items, item_description, login, e_commerce_user_profile, cart, shop, payment],
   },
   {
     id: 2,
@@ -25,6 +34,7 @@ const projectList = [
     period: 'Feb 2024 - Mar 2024',
     short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
     technologies: ['Python', 'Flask', 'API', 'OpenAI', 'AWS', 'Docker', 'JavaScript', 'Bootstrap', 'HTML', 'CSS', 'AI'],
+    thumbnail: revisionAi,
     images: [revisionAi, revisionAi, revisionAi, revisionAi],
   },
   {
@@ -33,6 +43,7 @@ const projectList = [
     period: 'Feb 2024 - Mar 2024',
     short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
     technologies: ['Python', 'Flask', 'Keras', 'TensorFlow', 'NumPy', 'OpenAI', 'HTML', 'CSS', 'JavaScript'],
+    thumbnail: covid_detector,
     images: [covid_detector, covid_detector, covid_detector, covid_detector],
   },
   {
@@ -41,6 +52,7 @@ const projectList = [
     period: 'Feb 2024 - Mar 2024',
     short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
     technologies: ['Python', 'Jupyter', 'StableDiffusion', 'Colab', 'AI', 'OpenAI'],
+    thumbnail: comic_generator,
     images: [comic_generator, comic_generator, comic_generator, comic_generator],
   },
 ];
@@ -82,7 +94,7 @@ const Projects = () => {
             onClick={() => openModal(project)}
           >
             <div className={`${styles.cardImageContainer}`}>
-              <img src={project.images[0]} alt={project.title} className={styles.cardImage} />
+              <img src={project.thumbnail} alt={project.title} className={styles.cardImage} />
               <div className={styles.overlay_card}>
                   <FaEye  className={`${styles.overlayIcon} d-none d-lg-block`} />
                   <div className={styles.lBorderTopLeft}></div>
