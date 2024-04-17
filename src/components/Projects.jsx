@@ -27,6 +27,7 @@ const projectList = [
     technologies: ['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'SQLite', 'Bootstrap', 'Celery'],
     thumbnail: e_commerce,
     images: [e_commerce_landing, home_items, item_description, login, e_commerce_user_profile, cart, shop, payment],
+    link: "https://github.com/khtrivedi84/E-commerce-shoes"
   },
   {
     id: 2,

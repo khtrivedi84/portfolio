@@ -42,6 +42,7 @@ const ProjectModal = ({ isOpen, closeModal, project }) => {
     >
       <button className={styles.close} onClick={closeModal}><IoMdCloseCircle /></button>
       <h2 className={styles.projectTitle}>{project.title}</h2>
+      {console.log(project)}
       <a href={project.link} target="_blank" rel="noreferrer" className={`btn btn-primary ${styles.viewLive}`}>View on GitHub <FaGithub /></a>
       <p className={styles.projectdescription}>{project.long_description}</p>
       <div className={styles.techContainer}>
