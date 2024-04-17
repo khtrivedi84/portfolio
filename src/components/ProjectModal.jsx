@@ -10,6 +10,7 @@ import { RiOpenaiFill } from "react-icons/ri";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { IoIosColorPalette, IoMdCloseCircle } from "react-icons/io";
 import styles from './ProjectModal.module.css';
+import { auto } from '@popperjs/core';
 
 Modal.setAppElement('#root');
 
@@ -49,6 +50,20 @@ const ProjectModal = ({ isOpen, closeModal, project }) => {
         {project.technologies.map((tech, index) => (
           <span key={index} className={`${styles[tech]} ${styles.techBadge}`}>{tech_map[tech]} {tech}</span>
         ))}
+      </div>
+      <div>
+        <Carousel interval={null}>
+          {project.images.map((image, index) => (
+            <Carousel.Item key={index}>
+              <img
+                className="d-block w-100"
+                src={image}
+                alt={project.title}
+                style= {{maxHeight: "50vh", objectFit: 'contain'}}
+              />
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
     </Modal>
   );

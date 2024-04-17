@@ -20,9 +20,8 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  /* overflow: hidden; */
-  /* allow scrolling if overflow */
   overflow-y: auto;
+  border: 1px solid #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -53,6 +52,7 @@
   cursor: pointer;
   font-size: 24px;
   background: none;
+  color: white;
 }
 
 .viewLive {
@@ -65,6 +65,7 @@
   white-space: nowrap;
   border-radius: 1rem;
   margin-top: 6px;
+  margin-left: 5px;
 }
 
 .techContainer {
