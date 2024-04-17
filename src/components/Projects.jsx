@@ -12,8 +12,29 @@ import cart from '../images/e_commerce/cart.png';
 import shop from '../images/e_commerce/shop.png';
 import payment from '../images/e_commerce/payment.png';
 import revisionAi from '../images/revisionai1.png';
-import covid_detector from '../images/covid_detector.png';
+import dashboard from '../images/revisionai/dashboard.png';
+import add_course from '../images/revisionai/add_course.png';
+import add_lecture from '../images/revisionai/add_lecture.png';
+import audio from '../images/revisionai/audio.png';
+import runpod from '../images/revisionai/runpod.png';
+import keywords from '../images/revisionai/keywords.png';
+import summary_list from '../images/revisionai/summary_list.png';
+import summary_page from '../images/revisionai/summary_page.png';
+import explanation from '../images/revisionai/explanation.png';
+import keyword_explanation from '../images/revisionai/keyword_explanation.png';
+import important_info from '../images/revisionai/important_info.png';
+import revision_login from '../images/revisionai/login.png';
 import comic_generator from '../images/comic_generator.png';
+import superman from '../images/comic_maker/superman.png';
+import green_lantern from '../images/comic_maker/green_lantern.png';
+import iron_man from '../images/comic_maker/iron_man.png';
+import mib from '../images/comic_maker/mib.png';
+import batman from '../images/comic_maker/batman.png';
+import iron_man2 from '../images/comic_maker/iron_man2.png';
+import captain_america from '../images/comic_maker/captain_america.png';
+import flash from '../images/comic_maker/flash.png';
+import covid_detector from '../images/covid_detector.png';
+
 import { FaEye } from "react-icons/fa";
 
 
@@ -21,8 +42,7 @@ const projectList = [
   {
     id: 1,
     title: 'E-commerce platform',
-    period: 'Feb 2024 - Mar 2024',
-    short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
+    short_description: 'An e-commerce site built using Python Django, SQLite, HTML, CSS, JavaScript, and Bootstrap.',
     long_description: 'An e-commerce website built using Python Django that allows users to purchase shoes of different brands. It includes all the basic functionalities of an e-commerce project, providing a seamless shopping experience for users.',
     technologies: ['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'SQLite', 'Bootstrap', 'Celery'],
     thumbnail: e_commerce,
@@ -32,17 +52,18 @@ const projectList = [
   {
     id: 2,
     title: 'RevisionAI',
-    period: 'Feb 2024 - Mar 2024',
-    short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
+    short_description: 'An AI powered tool to summarize class recordings and do quick revision.',
+    long_description: 'RevisionAI is a web application that utilizes artificial intelligence (AI) to generate topic-wise summaries and extract important information from uploaded class recordings. With this application, you can easily summarize your recorded lectures, identify key topics, and extract essential details for exams, midterms, assignments, or preparing for future lectures.',
     technologies: ['Python', 'Flask', 'API', 'OpenAI', 'AWS', 'Docker', 'JavaScript', 'Bootstrap', 'HTML', 'CSS', 'AI'],
     thumbnail: revisionAi,
-    images: [revisionAi, revisionAi, revisionAi, revisionAi],
+    images: [dashboard, add_course, add_lecture, audio, runpod, keywords, summary_list, summary_page, explanation, keyword_explanation, important_info, revision_login],
+    link: "https://github.com/khtrivedi84/RevisionAI"
   },
   {
     id: 3,
     title: 'Covid Detection',
-    period: 'Feb 2024 - Mar 2024',
-    short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
+    short_description: 'A web application that detects Covid and also features an AI ChatBot that provides recovery suggestions.',
+    long_description: 'Covid Detection is a web application that utilizes a deep learning model to detect Covid-19 using CT scan images. The application also features an AI ChatBot that provides recovery suggestions to users. The deep learning model is trained on a dataset of CT scan images to accurately detect Covid-19 in patients.',
     technologies: ['Python', 'Flask', 'Keras', 'TensorFlow', 'NumPy', 'OpenAI', 'HTML', 'CSS', 'JavaScript'],
     thumbnail: covid_detector,
     images: [covid_detector, covid_detector, covid_detector, covid_detector],
@@ -50,11 +71,12 @@ const projectList = [
   {
     id: 4,
     title: 'Comic Generator',
-    period: 'Feb 2024 - Mar 2024',
-    short_description: 'A chat application using MERN stack. Implemented real-time communication feature using Socket.io.',
+    short_description: 'Custom AI to generate comic panels featuring YOU as any superhero in your chosen art style.',
+    long_description: 'Comic Generator is a custom AI that generates comic panels featuring you as any superhero in your chosen art style. The AI uses StableDiffusion, a state-of-the-art generative model, to create comic panels based on your input. You can choose from a variety of art styles and superhero costumes to create your own unique comic book.',
     technologies: ['Python', 'Jupyter', 'StableDiffusion', 'Colab', 'AI', 'OpenAI'],
     thumbnail: comic_generator,
-    images: [comic_generator, comic_generator, comic_generator, comic_generator],
+    images: [superman, green_lantern, iron_man, mib, batman, iron_man2, captain_america, flash],
+    link: "https://github.com/khtrivedi84/ComicMaker"
   },
 ];
 

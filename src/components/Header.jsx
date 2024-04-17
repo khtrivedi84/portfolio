@@ -2,11 +2,8 @@ import styles from './Header.module.css';
 import profile from "../images/logo.png";
 import { useEffect, useState } from 'react';
 import { IoMdContact } from "react-icons/io";
-import { FaCode } from "react-icons/fa";
-import { FaCodeBranch } from "react-icons/fa";
+import { FaCodeBranch, FaHome, FaSuitcase, FaGraduationCap, FaCode } from "react-icons/fa";
 import { TiUser } from "react-icons/ti";
-import { FaSuitcase } from "react-icons/fa";
-import { FaGraduationCap } from "react-icons/fa";
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
 
@@ -33,6 +30,7 @@ const Header = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className={`navbar-nav nav-pills justify-content-center w-100 ${styles.headerBackground} ${styles.new_ul}`}>
+                        <a href="#hero" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaHome /> Home</li></a>
                         <a href="#aboutme" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><TiUser /> About</li></a>
                         <a href="#skills" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCode /> Skills</li></a>
                         <a href="#projects" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCodeBranch /> Projects</li></a>
