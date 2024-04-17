@@ -12,8 +12,8 @@
 
 .modalContent {
   position: relative;
-  width: 70vw;
-  height: 70vh;
+  width: 95vw;
+  height: 85vh;
   background: #1C1E1C;
   padding: 20px;
   border-radius: 20px;
@@ -22,6 +22,7 @@
   flex-direction: column;
   overflow-y: auto;
   border: 1px solid #ffffff;
+  transform: translateY(32px);
 }
 
 .modalContent::-webkit-scrollbar {
@@ -30,8 +31,8 @@
 
 @media (max-width: 768px) {
   .modalContent {
-    width: 90vw;
-    height: 70vh;
+    width: 95vw;
+    height: 85vh;
   }
 }
 
