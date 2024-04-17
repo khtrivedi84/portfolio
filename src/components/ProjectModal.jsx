@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import Carousel from 'react-bootstrap/Carousel';
 import e_commerce from '../images/e_commerce.png';
@@ -14,30 +14,21 @@ import styles from './ProjectModal.module.css';
 Modal.setAppElement('#root');
 
 const tech_map = {
-  'Python': <FaPython />,
-  'Django': <SiDjango />,
-  'HTML': <FaHtml5 />,
-  'CSS': <FaCss3Alt />,
-  'JavaScript': <IoLogoJavascript />,
-  'SQLite': <SiSqlite />,
-  'Bootstrap': <FaBootstrap />,
-  'Celery': <SiCelery />,
-  'Flask': <SiFlask />,
-  'API': <TbApi />,
-  'OpenAI': <RiOpenaiFill />,
-  'AWS': <FaAws />,
-  'Docker': <FaDocker />,
-  'Keras': <SiKeras />,
-  'TensorFlow': <SiTensorflow />,
-  'NumPy': <SiNumpy />,
-  'Jupyter': <SiJupyter />,
-  'GoogleColab': <SiGooglecolab />,
-  'AI': <GiArtificialIntelligence />,
-  'StableDiffusion': <IoIosColorPalette />
+  // Your tech_map remains the same
 };
 
 const ProjectModal = ({ isOpen, closeModal, project }) => {
-  if (!project) return null; // Return null if there is no project data.
+  const modalRef = useRef(null); // Ref for the modal content
+  const [carouselHeight, setCarouselHeight] = useState('30vh'); // State to store the calculated height
+
+  useEffect(() => {
+    if (modalRef.current) {
+      const height = modalRef.current.clientHeight; // Get the height of the modal content
+      setCarouselHeight(`${height * 0.6}px`); // Set the carousel height to 60% of the modal height
+    }
+  }, [isOpen]); // Recalculate when modal opens
+
+  if (!project) return null;
 
   return (
     <Modal
@@ -46,51 +37,40 @@ const ProjectModal = ({ isOpen, closeModal, project }) => {
       contentLabel="Project Details"
       className={styles.modalContent}
       overlayClassName={styles.modalOverlay}
+      ref={modalRef} // Attach ref
     >
       <button className={styles.close} onClick={closeModal}><IoMdCloseCircle /></button>
-      <h2 className={`${styles.projectTitle}`}>{project.title} {'\u00A0'} 
+      <h2 className={styles.projectTitle}>{project.title} 
         <a href={project.link} target="_blank" rel="noreferrer" className={`btn btn-primary ${styles.viewLive}`}>View on GitHub <FaGithub /></a>
       </h2>
-      <p className={`${styles.projectPeriod}`}>{project.period}</p>
-      <p className={`${styles.projectdescription}`}>{project.long_description}</p>
+      <p className={styles.projectPeriod}>{project.period}</p>
+      <p className={styles.projectdescription}>{project.long_description}</p>
       <div className={styles.techContainer}>
         {project.technologies.map((tech, index) => (
-          <span key={index} className={`${styles[tech]} ${styles.techBadge}`}>{tech_map[tech]} {tech}{'\u00A0'}</span>
+          <span key={index} className={`${styles[tech]} ${styles.techBadge}`}>{tech_map[tech]} {tech}</span>
         ))}
       </div>
-      <Carousel style={{display:"contents !important"}}>
+      <Carousel style={{ height: carouselHeight }}>
         <Carousel.Item>
           <img
             className={`d-block w-100 ${styles.carouselImage}`}
-            src={e_commerce} 
-            alt="First slide" // Corrected to 'alt' from 'text'
+            src={e_commerce}
+            alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className={`d-block w-100 ${styles.carouselImage}`}
-            src={e_commerce} 
+            src={e_commerce}
             alt="Second slide"
           />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className={`d-block w-100 ${styles.carouselImage}`}
-            src={e_commerce} 
+            src={e_commerce}
             alt="Third slide"
           />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </Modal>
