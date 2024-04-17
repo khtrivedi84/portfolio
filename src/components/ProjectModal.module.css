@@ -25,6 +25,12 @@
       width: 90vw;
       height: 70vh;
     }
+
+    .viewLive {
+      /* Go to next line */
+      display: block;
+      max-width: 30%;
+    }
   }
 
   .projectTitle {
