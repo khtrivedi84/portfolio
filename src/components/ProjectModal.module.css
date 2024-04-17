@@ -66,6 +66,19 @@
   border-radius: 1rem;
   margin-top: 6px;
   margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .viewLive {
+    max-width: 15%;
+  }
+}
+
+@media (max-width: 767px) {
+  .viewLive {
+    max-width: 40%;
+  }
 }
 
 .techContainer {

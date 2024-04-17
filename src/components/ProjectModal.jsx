@@ -41,10 +41,8 @@ const ProjectModal = ({ isOpen, closeModal, project }) => {
       ref={modalRef} // Attach ref
     >
       <button className={styles.close} onClick={closeModal}><IoMdCloseCircle /></button>
-      <h2 className={styles.projectTitle}>{project.title} 
-        <a href={project.link} target="_blank" rel="noreferrer" className={`btn btn-primary ${styles.viewLive}`}>View on GitHub <FaGithub /></a>
-      </h2>
-      <p className={styles.projectPeriod}>{project.period}</p>
+      <h2 className={styles.projectTitle}>{project.title}</h2>
+      <a href={project.link} target="_blank" rel="noreferrer" className={`btn btn-primary ${styles.viewLive}`}>View on GitHub <FaGithub /></a>
       <p className={styles.projectdescription}>{project.long_description}</p>
       <div className={styles.techContainer}>
         {project.technologies.map((tech, index) => (
