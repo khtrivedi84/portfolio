@@ -34,9 +34,26 @@ import iron_man2 from '../images/comic_maker/iron_man2.png';
 import captain_america from '../images/comic_maker/captain_america.png';
 import flash from '../images/comic_maker/flash.png';
 import covid_detector from '../images/covid_detector.png';
+import covid_landing from '../images/covid_detector/covid_landing.png';
+import covid_login from '../images/covid_detector/covid_login.png';
+import covid_dashboard from '../images/covid_detector/covid_dashboard.png';
+import questionnaire from '../images/covid_detector/questionnaire.png';
+import results from '../images/covid_detector/results.png';
+import chatbot from '../images/covid_detector/chatbot.png';
+import register from '../images/covid_detector/register.png';
+import discord_bot from '../images/discord_bot.png';
+import image1 from '../images/discord_bot/image1.png';
+import image2 from '../images/discord_bot/image2.png';
+import image3 from '../images/discord_bot/image3.png';
+import image4 from '../images/discord_bot/image4.png';
+import react_blog from '../images/react_blog.png';
+import blog_home from '../images/react_blog/blog_home.png';
+import articles from '../images/react_blog/articles.png';
+import blog_login from '../images/react_blog/blog_login.png';
+import blog_comments from '../images/react_blog/blog_comments.png';
+import blog_register from '../images/react_blog/blog_register.png';
 
 import { FaEye } from "react-icons/fa";
-
 
 const projectList = [
   {
@@ -66,7 +83,8 @@ const projectList = [
     long_description: 'Covid Detection is a web application that utilizes a deep learning model to detect Covid-19 using CT scan images. The application also features an AI ChatBot that provides recovery suggestions to users. The deep learning model is trained on a dataset of CT scan images to accurately detect Covid-19 in patients.',
     technologies: ['Python', 'Flask', 'Keras', 'TensorFlow', 'NumPy', 'OpenAI', 'HTML', 'CSS', 'JavaScript'],
     thumbnail: covid_detector,
-    images: [covid_detector, covid_detector, covid_detector, covid_detector],
+    images: [covid_landing, covid_login, covid_dashboard, questionnaire, results, chatbot, register],
+    link: "https://github.com/khtrivedi84/covid-19-detection"
   },
   {
     id: 4,
@@ -78,6 +96,26 @@ const projectList = [
     images: [superman, green_lantern, iron_man, mib, batman, iron_man2, captain_america, flash],
     link: "https://github.com/khtrivedi84/ComicMaker"
   },
+  {
+    id: 5,
+    title: 'CheerMeUp - Discord Bot',
+    short_description: 'CheerMeUp is a Discord bot designed to bring some cheer into your day!.',
+    long_description: 'This bot engages with users every two hours to inquire about their current mood and offers personalized motivational support based on their responses. The frequency of interactions can be adjusted to suit individual preferences.\n\nKey features include:\n- Mood Selection: Users can choose from a range of emotions to accurately describe their current state.\n- Personalized Motivation: The bot generates motivational text tailored to the mood selected by the user using GPT technology.\n- Custom Visuals: Utilizing DALL-E, the bot creates images that complement the motivational messages.\n- Intelligent Prompt Generation: The bot crafts prompts dynamically to facilitate meaningful interactions and enhance user experience.',
+    technologies: ['Python', 'Jupyter', 'StableDiffusion', 'Colab', 'AI', 'OpenAI'],
+    thumbnail: discord_bot,
+    images: [image2, image1, image3, image4],
+    link: "https://github.com/khtrivedi84/CheerMeUp-discord-bot"
+  },
+  {
+    id: 6,
+    title: 'Blog site using React',
+    short_description: 'A simple blog site built using ReactJS, Node.js, Express, and MongoDB.',
+    long_description: 'The project showcases a home page and renders articles using React components. It incorporates login/logout functionality through Firebase authentication and is deployed on the Google Cloud Platform. Additionally, it features an "Add Comments" functionality utilizing React hooks, such as useState and useEffect, to manage different component states. This project is hosted on Google Cloud and the database is in MongoDB.',
+    technologies: ['React', 'NodeJS', 'MongoDB', 'Redux', 'Google Cloud Platform', 'Firebase', "HTML", "CSS", "JavaScript", "Express"],
+    thumbnail: react_blog,
+    images: [blog_home, articles, blog_login, blog_comments, blog_register],
+    link: "https://github.com/khtrivedi84/ReactJS-Blog"
+  }
 ];
 
 const cardVariants = {
