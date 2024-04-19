@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import CanvasBackground from './components/CanvasAnimation';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <CanvasBackground />
       <Hero />
       <AboutMe />
+      {/* <Skills /> */}
       <Projects />
     </div>
     </>
