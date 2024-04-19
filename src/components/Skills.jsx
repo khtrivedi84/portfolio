@@ -1,21 +1,56 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Skills.module.css';
+import htmlLogo from '../images/logos/html_logo.png';
+import pythonLogo from '../images/logos/python_logo.png';
+import javascriptLogo from '../images/logos/js_logo.png';
+// import sqlLogo from '../images/sql_logo.png';
+import reactLogo from '../images/logos/react_logo.png';
+import djangoLogo from '../images/logos/django_logo.png';
+import flaskLogo from '../images/logos/flask_logo.png';
+import cssLogo from '../images/logos/css_logo.png';
+import mongodbLogo from '../images/logos/mongodb_logo.png';
 
 const skillsData = [
     {
         category: 'Languages',
         skills: [
-            { name: 'Python', percent: '95%' },
-            { name: 'JavaScript', percent: '75%' },
-            { name: 'SQL', percent: '85%' }
+            { name: 'Python', path: pythonLogo },
+            { name: 'JavaScript', path: javascriptLogo},
+            // { name: 'SQL', path: sqlLogo}
         ]
     },
     {
-        category: 'Others',
+        category: 'Backend',
         skills: [
-            { name: 'React', percent: '70%' },
-            { name: 'Django/Flask', percent: '95%' },
-            { name: 'HTML/CSS', percent: '85%' }
+            { name: 'Django', path: djangoLogo},
+            { name: 'Flask', path: flaskLogo},
+        ]
+    },
+    {
+        category: 'Frontend',
+        skills: [
+            { name: 'React', path: reactLogo},
+            { name: 'HTML', path: htmlLogo},
+            { name: 'CSS', path: cssLogo}
+        ]
+    },
+    {
+        category: 'Databases',
+        skills: [
+            { name: 'MySQL', path: flaskLogo},
+            { name: 'MongoDB', path: mongodbLogo},
+            { name: 'SQLite', path: flaskLogo},
+            { name: 'HTML', path: htmlLogo},
+        ]
+    },
+    {
+        category: 'Other',
+        skills: [
+            { name: 'React', path: reactLogo},
+            { name: 'Django', path: djangoLogo},
+            { name: 'Flask', path: flaskLogo},
+            { name: 'HTML', path: htmlLogo},
+            { name: 'CSS', path: cssLogo}
         ]
     }
 ];
@@ -52,13 +87,16 @@ const Skills = () => {
                     <div className={styles.skillsContent}>
                         <div className="row justify-content-center">
                             {skillsData.map((group, index) => (
-                                <div className={`col-md-4 col-sm-6 col-xs-12 ${index % 2 !== 0 ? styles.floatRight : ''}`}>
-                                    <div className={styles.skillst5}>
+                                <div className={`col-md-2  col-sm-6 col-xs-12 ${index % 2 !== 0 ? styles.floatRight : ''}`}>
+                                    <h5 className="text-light text-center">{group.category}</h5>
+                                    <div className={`${styles.skillst5} ${styles.category}`}>
                                         {group.skills.map((skill, skillIndex) => (
-                                            <div className={styles.skillbar}>
-                                                <div className={styles.title}>{skill.name}</div>
-                                                <div className={`${styles.countBar} ${styles.color1} ${isVisible ? styles.animate : ''}`} style={{ width: isVisible ? skill.percent : '0%' }}>
-                                                    <div className={styles.count}><span>{skill.percent}</span></div>
+                                            <div>
+                                                <div className={`${styles.skills__item} skills__item--html ${styles.skills__item_fade_in}`}>
+                                                    <img className={``} src={skill.path} alt={group.skills.name}/>
+                                                    <div className={`${styles.skills__item_name} text-light`}>
+                                                        {skill.name}
+                                                    </div>
                                                 </div>
                                             </div>
                                         ))}

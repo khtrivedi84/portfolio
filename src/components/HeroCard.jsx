@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HeroCard.module.css'; // Ensure this is the correct path to your CSS module
-import backgroundImage1 from '../images/e_commerce.png';
-import backgroundImage2 from '../images/revisionai1.png';
-import backgroundImage3 from '../images/covid_detector.png';
-import backgroundImage4 from '../images/comic_generator.png';
+import backgroundImage1 from '../images/e_commerce/e_commerce.png';
+import backgroundImage2 from '../images/revisionai/revisionai1.png';
+import backgroundImage3 from '../images/covid_detector/covid_detector.png';
+import backgroundImage4 from '../images/comic_maker/comic_generator.png';
 import { IoArrowForwardCircleSharp, IoArrowBackCircleSharp } from "react-icons/io5";
 import { FaLongArrowAltRight } from "react-icons/fa";
 

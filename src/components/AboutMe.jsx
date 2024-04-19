@@ -1,17 +1,7 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import styles from "./AboutMe.module.css";
-import htmlLogo from "../images/html_logo.png";
-import jsLogo from "../images/js_logo.png";
-import cssLogo from "../images/css_logo.png";
-import mongodbLogo from "../images/mongodb_logo.png";
-import reactLogo from "../images/react_logo.png";
-import gitLogo from "../images/git_logo.png";
-import pythonLogo from "../images/python_logo.png";
-import djangoLogo from "../images/django_logo.png";
-import flaskLogo from "../images/flask_logo.png";
-import dockerLogo from "../images/docker_logo.png";
-import profile from "../images/final2.png";
+import profile from "../images/profile/final2.png";
 
 const AboutMe = () => {
 

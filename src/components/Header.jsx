@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import profile from "../images/logo.png";
+import profile from "../images/logos/logo.png";
 import { useEffect, useState } from 'react';
 import { IoMdContact } from "react-icons/io";
 import { FaCodeBranch, FaHome, FaSuitcase, FaGraduationCap, FaCode } from "react-icons/fa";
