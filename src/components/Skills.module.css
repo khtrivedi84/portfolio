@@ -1,4 +1,88 @@
-.skills {
+/* Background and padding for the skills section */
+.skillsSection {
+    padding-bottom: 100px;
+    margin: 0 -11px;
+    padding-left: 10px;
+    padding-right: 10px;
+    scroll-margin-top: 100px;
+}
+
+/* Middle area styling */
+.skillsAreaMiddle {
+    background-color: #313741;
+    padding: 80px 0;
+    margin: 0 -11px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Content styling inside the container */
+.skillsContent {
+    margin-top: 25px;
+}
+
+/* Styles for the skills display area */
+.skillst5 {
+    width: 90%;
+    position: relative; /* Ensures all child absolute elements are positioned relative to this */
+}
+
+/* Base styles for each skill bar */
+.skillbar {
+    background-color: #0f1012;
+    height: 5px;
+    width: 100%; /* Ensures the black base bar spans the full width */
+    position: relative; /* Needed for absolute positioning of children */
+    margin-bottom: 90px; /* Increased space between each skill bar */
+}
+
+.skillbar:last-child {
+    margin-bottom: 0; /* Remove margin for the last skill bar */
+}
+
+/* Styling for the filled part of each skill bar */
+.countBar {
+    height: 5px; /* Match the height of the base bar */
+    background: #00d7bb;
+    position: absolute; /* Overlays directly on the black base bar */
+    top: 0;
+    left: 0;
+    width: 0%; /* Initial width should be 0; will be set dynamically in React */
+    border-radius: 1rem;
+}
+
+/* Styling for the percentage count text */
+.count {
+    position: absolute; /* Positioning it relative to the filled bar */
+    top: -25px; /* Adjust this value to position the label above the bar */
+    right: 0; /* Aligns text to the right of the filled bar */
+    color: #fff; /* White text color for better visibility */
+    font-size: 14px; /* Slightly larger font size for the percentage text */
+}
+
+/* Ensure titles are positioned correctly and do not overlap the progress bar */
+.title {
+    position: absolute;
+    top: -40px; /* Position the title further above the skill bar */
+    left: 0; /* Starts from the left edge of the skillbar */
+    color: #fff; /* White color for visibility */
+    font-size: 18px; /* Increased font size for better visibility */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Style for when elements need to be floated to the right (conditionally applied) */
+.floatRight {
+    float: right;
+}
+
+/* Add this new class for animation */
+.animate {
+    transition: width 2s ease-in-out;
+}
+
+
+/* .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -187,5 +271,4 @@
 
 .skills__item--webpack img {
     border-radius: 50%;
-}
-
+} */
