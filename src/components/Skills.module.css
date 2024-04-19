@@ -9,7 +9,6 @@
 
 /* Middle area styling */
 .skillsAreaMiddle {
-    background-color: #313741;
     padding: 80px 0;
     margin: 0 -11px;
     padding-left: 10px;
@@ -20,15 +19,12 @@
 .skillst5 {
     position: relative; /* Ensures all child absolute elements are positioned relative to this */
     padding: 5px;
+    background-color: #1C1E1C;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .category {
     border-radius: 10px; 
-    background-color: black;
-}
-
-.title {
-    color: white;
 }
 
 .skills__item {
@@ -38,13 +34,20 @@
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
-    background-color: #313741;
+    background-color: #ffffff;
+    opacity: 0.9;
     margin: 10px;
     transition: all 0.3s ease;
 }
 
 .skills__item img {
-    width: 30px;
     height: 30px;
     margin-bottom: 20px;
+}
+
+.categoryBackground {
+    /* background-color: #1C1E1C; */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
 }

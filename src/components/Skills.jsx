@@ -16,41 +16,44 @@ const skillsData = [
         skills: [
             { name: 'Python', path: pythonLogo },
             { name: 'JavaScript', path: javascriptLogo},
-            // { name: 'SQL', path: sqlLogo}
+            { name: 'SQL', path: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"},
+            { name: 'Java', path: "https://upload.wikimedia.org/wikipedia/de/e/e1/Java-Logo.svg"}
         ]
     },
     {
         category: 'Backend',
         skills: [
-            { name: 'Django', path: djangoLogo},
+            { name: 'Django', path: "https://upload.wikimedia.org/wikipedia/de/0/0e/Django-logo.svg"},
             { name: 'Flask', path: flaskLogo},
+            { name: 'Node', path: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"},
+            { name: 'Spring', path: "https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg"}
         ]
     },
     {
         category: 'Frontend',
         skills: [
             { name: 'React', path: reactLogo},
-            { name: 'HTML', path: htmlLogo},
-            { name: 'CSS', path: cssLogo}
+            { name: 'HTML', path: "https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"},
+            { name: 'CSS', path: cssLogo},
+            { name: 'Bootstrap', path: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"}
         ]
     },
     {
         category: 'Databases',
         skills: [
-            { name: 'MySQL', path: flaskLogo},
+            { name: 'MySQL', path: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/800px-MySQL_textlogo.svg.png"},
             { name: 'MongoDB', path: mongodbLogo},
-            { name: 'SQLite', path: flaskLogo},
-            { name: 'HTML', path: htmlLogo},
+            { name: 'Redis', path: "https://upload.wikimedia.org/wikipedia/commons/6/64/Logo-redis.svg"},
+            { name: 'PostgreSQL', path: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"}
         ]
     },
     {
         category: 'Other',
         skills: [
-            { name: 'React', path: reactLogo},
-            { name: 'Django', path: djangoLogo},
-            { name: 'Flask', path: flaskLogo},
-            { name: 'HTML', path: htmlLogo},
-            { name: 'CSS', path: cssLogo}
+            { name: 'AWS', path: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"},
+            { name: 'Docker', path: "https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_%28container_engine%29_logo.png"},
+            { name: 'Git', path: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png"},
+            { name: 'Linux', path: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"}
         ]
     }
 ];
@@ -87,14 +90,14 @@ const Skills = () => {
                     <div className={styles.skillsContent}>
                         <div className="row justify-content-center">
                             {skillsData.map((group, index) => (
-                                <div className={`col-md-2  col-sm-6 col-xs-12 ${index % 2 !== 0 ? styles.floatRight : ''}`}>
-                                    <h5 className="text-light text-center">{group.category}</h5>
+                                <div className={`col-md-2  col-sm-6 col-xs-12 ${index % 2 !== 0 ? styles.floatRight : ''} ${styles.categoryBackground}`}>
+                                    <h5 className="text-light text-center mb-4">{group.category}</h5>
                                     <div className={`${styles.skillst5} ${styles.category}`}>
                                         {group.skills.map((skill, skillIndex) => (
                                             <div>
                                                 <div className={`${styles.skills__item} skills__item--html ${styles.skills__item_fade_in}`}>
                                                     <img className={``} src={skill.path} alt={group.skills.name}/>
-                                                    <div className={`${styles.skills__item_name} text-light`}>
+                                                    <div className={`${styles.skills__item_name}`}>
                                                         {skill.name}
                                                     </div>
                                                 </div>
