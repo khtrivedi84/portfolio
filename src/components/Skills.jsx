@@ -79,10 +79,8 @@ const Skills = () => {
     return (
         <div id='pro-skills-area' className={styles.skillsSection} ref={ref}>
             <div className={styles.skillsAreaTop}>
-                <div className="container justify-content-center text-center text-light mb-4">
-                    <div className={styles.sectionTitle}>
-                        <h2>Skills</h2>
-                    </div>
+                <div className="container justify-content-center text-center text-light">
+                    <h2 className={styles.sectionTitle}>Skills</h2>
                 </div>
             </div>
             <div className={styles.skillsAreaMiddle}>
