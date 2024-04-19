@@ -18,7 +18,8 @@
     margin-top: 5%;
     display: flex;
     justify-content: center;
-    background-color: #0E0C0E;
+    background: #18363f;
+    background-color: #18363f;
 }
 
 .imageDiv::after {
@@ -40,6 +41,7 @@
 .profileImage {
     height: 22.9rem;
     width: 18.1rem;
+    background: #18363f;
 }
 
 @media (max-width: 767px) {
@@ -94,5 +96,40 @@
     .profileImage {
         height: 7.9rem;
         width: 5.1rem;
+    }
+}
+
+
+.hideDiv {
+    visibility: hidden;
+}
+
+.animateFromLeft {
+    animation: slideFromLeft 1s ease forwards;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+.animateFromRight {
+    animation: slideFromRight 1s ease forwards;
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+        visibility: hidden;
+    }
+    100% {
+        transform: translateX(0);
+        visibility: visible;
     }
 }
