@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import SocialMedia from './SocialMedia';
 import styles from "./Hero.module.css";
 import { FaArrowDown } from 'react-icons/fa';
-import Card from './HeroCard';
+// import Card from './HeroCard';
 
 const Hero = () => {
     return(
@@ -41,8 +41,7 @@ const Hero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
             >
-                <a href="#aboutme" className={`btn btn-primary ${styles.scrollMore2} ${styles.buttonMargin}`}>
-                    <span style={{position:'relative', top:"25%"}}>Know More!</span>
+                <a href="#aboutme" className={`${styles.scrollMore2} ${styles.buttonMargin}`}>
                     <div className={`position-absolute bottom-0 end-0  ${styles.bounceArrow}`}>
                         <FaArrowDown size={20} color="#fff" />
                     </div>
