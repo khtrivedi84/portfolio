@@ -1,6 +1,7 @@
 .projectsContainer {
     min-height: 100vh;
     color: #333; /* Adjust text color as needed */
+    scroll-margin-top: 70px;
   }
   
   .cardsRow {
