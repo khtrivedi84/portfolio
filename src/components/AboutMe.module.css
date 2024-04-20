@@ -8,8 +8,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    scroll-margin-top: 70px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .imageDiv {

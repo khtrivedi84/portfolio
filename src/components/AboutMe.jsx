@@ -18,7 +18,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div ref={ref} id="aboutme" className={`${styles.centerDiv} ${styles.aboutMeMobile} container`}>
+    <div ref={ref} id="aboutme" className={`${styles.centerDiv} container`}>
         <div className={`row justify-content-center align-items-center text-white`}>
             <h2 className="text-center text-light" style={{marginBottom:"2rem"}}>About Me</h2>
             <div className={`col-md-6 justify-content-center d-flex mb-4`}>
@@ -49,67 +49,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-                {/* <div className={styles.skills}>
-                    
-                    <div className={styles.skills__row}>
-                        <div className={`${styles.skills__item} skills__item--html ${styles.skills__item_fade_in}`}>
-                            <img src={htmlLogo} alt="HTML"/>
-                            <div className={`${styles.skills__item_name}`}>
-                                HTML
-                            </div>
-                        </div>
-                        <div className={`${styles.skills__item} skills__item--react ${styles.skills__item_fade_in}`}>
-                            <img src={reactLogo} alt="React" />
-                            <div className={`${styles.skills__item_name}`}>
-                                REACT
-                            </div>
-                        </div>
-                        <div className={`${styles.skills__item} skills__item--npm ${styles.skills__item_fade_in}`}>
-                            <img src={dockerLogo} alt="Docker" />
-                            <div className={`${styles.skills__item_name}`}>
-                                DOCKER
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.skills__row}>
-                        <div className={`${styles.skills__item} skills__item--js ${styles.skills__item_fade_in}`}>
-                            <img src={jsLogo} alt="JavaScript" />
-                            <div className={`${styles.skills__item_name}`}>
-                                JAVASCRIPT
-                            </div>
-                        </div>
-                        <div className={`${styles.skills__item} skills__item--css ${styles.skills__item_fade_in}`}>
-                            <img src={cssLogo} alt="CSS" />
-                            <div className={`${styles.skills__item_name}`}>
-                                CSS
-                            </div>
-                        </div>
-                        <div className={`${styles.skills__item} skills__item--python ${styles.skills__item_fade_in}`}>
-                            <img src={mongodbLogo} alt="MongoDB" />
-                            <div className={`${styles.skills__item_name}`}>
-                                MONGODB
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.skills__row}>
-                        <div className={`${styles.skills__item} skills__item--sass ${styles.skills__item_fade_in}`}>
-                            <img src={pythonLogo} alt="Python" />
-                            <div className={`${styles.skills__item_name}`}>
-                                PYTHON
-                            </div>
-                        </div>
-                        <div className={`${styles.skills__item} skills__item--webpack ${styles.skills__item_fade_in}`}>
-                            <img src={djangoLogo} alt="Django" />
-                            <div className={`${styles.skills__item_name}`}>
-                                DJANGO
-                            </div>
-                        </div>
-                        <div className={`${styles.skills__item} skills__item--r ${styles.skills__item_fade_in}`}>
-                            <img src={flaskLogo} alt="Flask" />
-                            <div className={`${styles.skills__item_name}`}>
-                                FLASK
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
