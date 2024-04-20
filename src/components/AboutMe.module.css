@@ -31,6 +31,7 @@
     position: absolute;
     transform: translate(37px, -37px);
     z-index: -1;
+    opacity: 0.5
 }
 
 .glowingBorder {
