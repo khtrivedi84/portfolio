@@ -1,6 +1,7 @@
 .contactContainer {
     color: #fff;
     padding: 60px 0;
+    scroll-margin-top: 70px;
 }
 
 .contactRow {

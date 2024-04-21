@@ -61,7 +61,7 @@ const Experience = () => {
     };
 
     return (
-        <div id="experience" className={`container justify-content-center mt-4 ${styles.experienceContainer}`}>
+        <div id="education" className={`container justify-content-center mt-4 ${styles.experienceContainer}`}>
             <h2 className={`text-center ${styles.experienceHeading} ${styles.sectionh2}`}>Education</h2>
             <div className={`row justify-content-center`}>
                 <div className="col-md-10 col-md-offset-1">
