@@ -33,9 +33,9 @@ const Header = () => {
                         <a href="#hero" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaHome /> Home</li></a>
                         <a href="#aboutme" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><TiUser /> About</li></a>
                         <a href="#pro-skills-area" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCode /> Skills</li></a>
-                        <a href="#projects" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCodeBranch /> Projects</li></a>
                         <a href="#experience" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaSuitcase /> Experience</li></a>
                         <a href="#education" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaGraduationCap /> Education</li></a>
+                        <a href="#projects" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCodeBranch /> Projects</li></a>
                         <a href="#contact" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><IoMdContact /> Contact Me</li></a>
                     </ul>
                 </div>
