@@ -16,7 +16,7 @@
     border: 2px solid #00d7bb;
     border-radius: 50%;
     color: #00d7bb;
-    content: "\f19c";
+    content: "\f19d";
     font-family: fontawesome;
     font-size: 25px;
     height: 70px;
@@ -176,7 +176,6 @@
     padding-left: 1.1rem;
 }
 
-
 @media only screen and (min-width:320px) {
     .experienceContent::before {
         left: 20px;
@@ -320,7 +319,7 @@
         left: auto;
         right: 122%;
         /* text-align: right; */
-        transform: translate(-122%, -30%);
+        transform: translate(-122%, -50%);
     }
     
 
