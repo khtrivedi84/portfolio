@@ -57,7 +57,7 @@ const ProjectModal = ({ isOpen, closeModal, project }) => {
       <p className={styles.projectdescription}>{project.long_description}</p>
       <div className={styles.techContainer}>
         {project.technologies.map((tech, index) => (
-          <span key={index} className={`${styles.techBadge}`}><img src={tech_map[tech]} style={{height:"24px", width:"24px"}}></img> {tech}</span>
+          <span key={index} className={`${styles.techBadge}`}><img alt={tech} src={tech_map[tech]} style={{height:"24px", width:"24px"}}></img> {tech}</span>
         ))}
       </div>
       <Carousel interval={null} controls={project.images.length > 1}>

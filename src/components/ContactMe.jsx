@@ -1,7 +1,24 @@
 import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import styles from './ContactMe.module.css';
 
 const ContactMe = () => {
+    const [state, handleSubmit, reset] = useForm("mjvnjojp"); // Replace "yourFormId" with your actual Formspree form ID
+
+    if (state.succeeded) {
+        return (
+            <div className={styles.successMessage}>
+                Thank you for your message. We will get back to you soon!
+                <button 
+                    className={styles.newMessageButton}
+                    onClick={() => reset()} // Resets the form state
+                >
+                    New message?
+                </button>
+            </div>
+        );
+    }
+
     return (
         <div id="contact" className={`container justify-content-center mt-4 ${styles.contactContainer}`}>
             <div className={`row ${styles.contactRow}`}>
@@ -26,20 +43,22 @@ const ContactMe = () => {
                 </div>
             </div>
             <div className={styles.contactForm}>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={`${styles.formGroup}`}>
-                        <input type="text" id="name" className={`${styles.formControl}`} required />
+                        <input type="text" id="name" name="name" className={`${styles.formControl}`} required />
                         <label htmlFor="name" className={styles.formLabel}>Name</label>
                     </div>
                     <div className={`${styles.formGroup}`}>
-                        <input type="email" id="email" className={`${styles.formControl}`} required />
+                        <input type="email" id="email" name="email" className={`${styles.formControl}`} required />
                         <label htmlFor="email" className={styles.formLabel}>Email</label>
+                        <ValidationError prefix="Email" field="email" errors={state.errors} className={styles.validationError} />
                     </div>
                     <div className={`${styles.formGroup} ${styles.formGroupTextarea}`}>
-                        <textarea id="message" className={`${styles.formControl}`} rows="5" required></textarea>
+                        <textarea id="message" name="message" className={`${styles.formControl}`} rows="5" required></textarea>
                         <label htmlFor="message" className={styles.formLabel}>Message</label>
+                        <ValidationError prefix="Message" field="message" errors={state.errors} className={styles.validationError} />
                     </div>
-                    <button type="submit" className={`btn ${styles.submitBtn}`}>Send Message</button>
+                    <button type="submit" className={`btn ${styles.submitBtn}`} disabled={state.submitting}>Send Message</button>
                 </form>
             </div>
         </div>

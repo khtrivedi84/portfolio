@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@popperjs/core": "^2.11.8",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.16.5",

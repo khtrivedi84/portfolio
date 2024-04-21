@@ -1,11 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Skills.module.css';
-import htmlLogo from '../images/logos/html_logo.png';
 import pythonLogo from '../images/logos/python_logo.png';
 import javascriptLogo from '../images/logos/js_logo.png';
-// import sqlLogo from '../images/sql_logo.png';
 import reactLogo from '../images/logos/react_logo.png';
-import djangoLogo from '../images/logos/django_logo.png';
 import flaskLogo from '../images/logos/flask_logo.png';
 import cssLogo from '../images/logos/css_logo.png';
 import mongodbLogo from '../images/logos/mongodb_logo.png';

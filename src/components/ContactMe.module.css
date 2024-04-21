@@ -4,6 +4,24 @@
     scroll-margin-top: 70px;
 }
 
+.successMessage {
+    font-size: 16px;
+    color: #4CAF50;
+    background-color: #f0fff0;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.validationError {
+    color: #ff0000; 
+    font-size: 14px; 
+    margin-top: 5px; 
+}
+
 .contactRow {
     margin-bottom: 40px;
 }
