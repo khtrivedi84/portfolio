@@ -84,7 +84,7 @@
 }
 
 .experienceContent .cdTimelineBlock {
-    margin: 0 0 150px;
+    margin: 0 0 75px;
 }
 
 .dot {
@@ -312,7 +312,7 @@
         left: auto;
         right: 122%;
         /* text-align: right; */
-        transform: translate(-122%, -35%);
+        transform: translate(-122%, -59%);
     }
 
     .experienceContent .cdTimeline::after {

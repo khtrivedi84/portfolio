@@ -8,11 +8,7 @@ const experiences = [
     • Implemented full-stack project using Flutter, Dart for frontend, Firebase for backend authentication, data management, and Android
     Studio for testing.
     ` },
-    { id: 2, title: "Bachelors in Computer Engineering", date: "Aug 2016 - Aug 2020", company: "Santa Clara University", description: `• Developed and maintained 50+ reusable components in a CMS environment, integrating database integration and server‐side scripting
-    • Utilized front‐end technologies (JavaScript, HTML/CSS) to ensure seamless functionality of the components
-    • Employed performance optimization techniques, such as asynchronous loading and lazy loading, resulting in a notable 20% improvement in page load speed,
-    benefiting over 200,000 monthly visitors
-    • Utilized Google Analytics to track user behavior and inform decision‐making processes, demonstrating data‐driven approach to web development
+        { id: 2, title: "Bachelors in Computer Engineering", date: "Aug 2016 - Aug 2020", company: "Santa Clara University", description: `• Utilized Google Analytics to track user behavior and inform decision‐making processes, demonstrating data‐driven approach to web development
     • Facilitated efficient cross‐functional collaboration utilizing Slack and Asana task management, ensuring smooth project coordination and timely deliverables` }
 ];
 
