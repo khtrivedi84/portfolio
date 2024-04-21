@@ -80,14 +80,6 @@
     color: #ffffff;
 }
 
-.formGroupTextarea {
-    padding-top: 20px;
-}
-
-.formGroupTextarea .formControl {
-    padding-top: 20px;
-}
-
 .formGroupTextarea .formLabel {
     top: 20px;
 }
