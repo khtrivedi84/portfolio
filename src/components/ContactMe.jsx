@@ -8,13 +8,14 @@ const ContactMe = () => {
     if (state.succeeded) {
         return (
             <div className={styles.successMessage}>
-                Thank you for your message. We will get back to you soon!
-                <button 
+                Thank you for your message. I will get back to you soon! &#160;
+                <a style={{textDecoration: 'underline', color: '#007bff', cursor: 'pointer'}}
                     className={styles.newMessageButton}
                     onClick={() => reset()} // Resets the form state
                 >
+                    {/* add space using unicode */}
                     New message?
-                </button>
+                </a>
             </div>
         );
     }
