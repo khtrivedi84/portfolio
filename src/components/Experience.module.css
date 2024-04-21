@@ -1,0 +1,324 @@
+.experienceContainer {
+    scroll-margin-top: 100px;
+}
+
+.experienceHeading {
+    color: white;
+}
+
+.experienceContent {
+    margin-top: 130px;
+    position: relative;
+}
+
+.experienceContent::before {
+    border: 2px solid #00d7bb;
+    border-radius: 50%;
+    color: #00d7bb;
+    content: "\f19c";
+    font-family: fontawesome;
+    font-size: 25px;
+    height: 70px;
+    left: 50%;
+    line-height: 65px;
+    position: absolute;
+    text-align: center;
+    top: -70px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 70px;
+}
+
+.experienceContent .cdTimeline {
+    margin: 0;
+}
+
+.experienceContent .cdTimeline::before {
+    background-color: #00d7bb;
+}
+
+.cdTimeline {
+    position: relative;
+    padding: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+.cdTimeline::before {
+    /* this is the vertical line */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: #d7e4ed;
+  }
+
+.cdTimelineBlock {
+    position: relative;
+}
+
+.cdTimelineImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.experienceContent .cdTimelineImg {
+    background-color: #313741;
+    border: 2px solid #00d7bb;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 35px;
+    margin-left: -17.5px;
+    top: 25px;
+    width: 35px;
+    z-index: 1;
+}
+
+.experienceContent .cdTimelineBlock {
+    margin: 0 0 150px;
+}
+
+.dot {
+    background-color: #00d7bb;
+    border-radius: 50%;
+    display: block;
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 10px;
+}
+
+.cdTimelineContent {
+    position: relative;
+    margin-left: 60px;
+    background: white;
+    border-radius: 0.25em;
+    padding: 1em;
+    -webkit-box-shadow: 0 3px 0 #d7e4ed;
+    box-shadow: 0 3px 0 #d7e4ed;
+}
+
+.experienceContent .cdTimelineContent {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 10px 0 0;
+    text-align: right;
+}
+
+.cdTimelineBlock:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.experienceContent .cdTimelineContent h2 {
+    color: #00d7bb;
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.cdTimelineContent p {
+    line-height: 1.6;
+}
+
+.experienceContent .cdTimelineContent p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.experienceContent .cdDescription {
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+    opacity: 1;
+    padding: 0;
+    text-align: left;
+}
+
+.experienceContent .cdTimelineBlock:nth-child(2n) .cdTimelineContent {
+    text-align: left;
+}
+
+.experienceContent .cdTimeline::after {
+    background-color: #00d7bb;
+    border-radius: 50%;
+    bottom: 0;
+    content: "";
+    height: 20px;
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+    width: 20px;
+}
+
+
+@media only screen and (min-width:320px) {
+    .experienceContent::before {
+        left: 20px;
+    }
+
+    .cdTimelineImg {
+        left: 19px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .experienceContent .cdTimelineContent{
+        text-align: left;
+    }
+
+    .experienceContent .cdTimelineContent h2 {
+        font-size: 24px;
+    }
+
+    .experienceContent .cdTimelineContent p {
+        margin: 15px 0 10px;
+    }
+
+    .experienceContent .cdTimeline::after {
+        left: 20px;
+    }
+}
+
+
+@media only screen and (min-width:480px) {
+    .experienceContent::before {
+        left: 20px;
+    }
+
+    .cdTimelineImg {
+        left: 19px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .experienceContent .cdTimelineContent{
+        text-align: left;
+    }
+
+    .experienceContent .cdTimelineContent h2 {
+        font-size: 24px;
+    }
+
+    .experienceContent .cdTimelineContent p {
+        margin: 15px 0 10px;
+    }
+
+    .experienceContent .cdTimeline::after {
+        left: 20px;
+    }
+}
+
+
+@media only screen and (min-width:768px) {
+    .experienceContent::before {
+        left: 20px;
+    }
+
+    .cdTimelineImg {
+        left: 19px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .experienceContent .cdTimelineContent{
+        text-align: left;
+    }
+
+    .experienceContent .cdTimelineContent h2 {
+        font-size: 27px;
+    }
+
+    .experienceContent .cdTimelineContent p {
+        margin: 15px 0 10px;
+    }
+
+    .cdTimelineContent .cdDescription {
+        font-size: 14px;
+        font-size: 0.875rem;
+    }
+
+    .experienceContent .cdTimeline::after {
+        left: 20px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .experienceContent::before {
+        left: 50%;
+    }
+
+    .experienceContent .cdTimeline::before {
+        left: 50%;
+        margin-left: -2px;
+    }
+
+    .cdTimelineImg {
+        left: 50%;
+        top: 20px;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    .cdTimelineContent {
+        margin-left: 0;
+        padding: 1.6em;
+        width: 45%;
+    }
+
+    .experienceContent .cdTimelineContent{
+        text-align: right;
+    }
+
+    .experienceContent .cdTimelineContent p {
+        margin: 0;
+    }
+
+    .cdTimelineContent .cdDescription {
+        /* position: absolute; */
+        width: 100%;
+        left: 122%;
+        top: 6px;
+        font-size: 16px;
+        font-size: 1rem;
+        transform: translate(122%, -59%);
+    }
+
+    .cdTimelineBlock:nth-child(even) .cdTimelineContent{
+        float: right;
+    }
+
+    .cdTimelineBlock:nth-child(even) .cdTimelineContent .cdDescription {
+        left: auto;
+        right: 122%;
+        /* text-align: right; */
+        transform: translate(-122%, -35%);
+    }
+
+    .experienceContent .cdTimeline::after {
+        left: 50%;
+    }
+}
+
+.experienceContent .cdTimelineBlock:last-child {
+    margin-bottom: 0 !important;
+}

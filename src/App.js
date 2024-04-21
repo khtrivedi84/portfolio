@@ -7,6 +7,7 @@ import AboutMe from './components/AboutMe';
 import CanvasBackground from './components/CanvasAnimation';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <AboutMe />
       <Skills />
+      <Experience />
       <Projects />
     </div>
     </>
