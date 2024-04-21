@@ -80,7 +80,7 @@ const Skills = () => {
         <div id='pro-skills-area' className={styles.skillsSection} ref={ref}>
             <div className={styles.skillsAreaTop}>
                 <div className="container justify-content-center text-center text-light">
-                    <h2 className={styles.sectionTitle}>Skills</h2>
+                    <h2 className={`${styles.sectionTitle} ${styles.sectionh2}`}>Skills</h2>
                 </div>
             </div>
             <div className={styles.skillsAreaMiddle}>

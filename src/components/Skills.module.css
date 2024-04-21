@@ -25,6 +25,10 @@
     border-radius: 10px; 
 }
 
+.sectionh2 {
+    font-size: 32px !important;
+}
+
 .skills__item {
     display: flex;
     flex-direction: column;

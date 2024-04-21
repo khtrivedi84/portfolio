@@ -23,6 +23,10 @@
     background-color: #18363f;
 }
 
+.sectionh2 {
+    font-size: 32px !important;
+}
+
 .imageDiv::after {
     content: "";
     border: 2px solid white;

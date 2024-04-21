@@ -145,7 +145,7 @@ const Projects = () => {
   return (
     <div id="projects" className={`container justify-content-center mt-4 ${styles.projectsContainer}`}>
       <div className={`row ${styles.cardsRow}`}>
-        <h2 className={`text-center mt-4 text-light`}>Projects</h2>
+        <h2 className={`text-center mt-4 text-light ${styles.sectionh2}`}>Projects</h2>
         {projectList.map((project) => (
           <motion.div
             key={project.id}

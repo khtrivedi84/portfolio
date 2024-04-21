@@ -20,7 +20,7 @@ const AboutMe = () => {
   return (
     <div ref={ref} id="aboutme" className={`${styles.centerDiv} container`}>
         <div className={`row justify-content-center align-items-center text-white`}>
-            <h2 className="text-center text-light" style={{marginBottom:"2rem"}}>About Me</h2>
+            <h2 className={`text-center text-light ${styles.sectionh2}`} style={{marginBottom:"2rem"}}>About Me</h2>
             <div className={`col-md-6 justify-content-center d-flex mb-4`}>
                 <div className={`${styles.imageDiv} ${styles.hideDiv} ${styles.glowingBorder} ${inView ? styles.animateFromLeft : ''}`}>
                     <img src={profile} alt="HTML" className={`${styles.profileImage}`} />

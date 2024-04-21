@@ -23,6 +23,10 @@
     color: #ffffff;
     border-radius: 18px;
   }
+
+  .sectionh2 {
+    font-size: 32px !important;
+  }
   
   .cardImageContainer {
     position: relative;

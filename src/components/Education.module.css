@@ -30,6 +30,10 @@
     width: 70px;
 }
 
+.sectionh2 {
+    font-size: 32px !important;
+}
+
 .experienceContent .cdTimeline {
     margin: 0;
 }
