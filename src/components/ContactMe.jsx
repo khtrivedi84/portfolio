@@ -32,7 +32,7 @@ const ContactMe = () => {
             <div className={`row ${styles.contactInfo}`}>
                 <div className={`col ${styles.infoCard}`}>
                     <i className={`fas fa-phone ${styles.infoIcon}`}></i>
-                    <p>+ (669) 295 87 37</p>
+                    <p>+1 (669) 295 87 37</p>
                 </div>
                 <div className={`col ${styles.infoCard}`}>
                     <i className={`fas fa-envelope ${styles.infoIcon}`}></i>
