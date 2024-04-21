@@ -1,0 +1,128 @@
+.sectionh2 {
+    color: #ffffff;
+}
+
+.contactForm input,
+.contactForm textarea {
+    background-color: transparent;
+    border: none;
+    color: #8491a2; /* Light grey text color for input */
+    font-size: 14px;
+    height: 35px;
+    padding: 5px;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    resize: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contactForm input,
+.contactForm textarea {
+    border-bottom: 2px solid #58616d;
+}
+
+.nameInput,
+.emailInput,
+.textareaInput {
+    margin-bottom: 40px;
+}
+
+.contactForm textarea {
+    height: 235px;
+}
+
+.contactForm button {
+    background-color: transparent;
+    color: #02cfb4;
+    display: block;
+    margin: 50px auto;
+    padding: 13px 50px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-image: linear-gradient(to right, #17D396, #07F7F7);
+    border-image-slice: 1;
+}
+
+.contactForm button:hover {
+    background-color: #17d397;
+    color: #22252c;
+    box-shadow: 0 1px 20px rgba(22, 213, 144, 0.8);
+    transform: scale(1.05);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    border-bottom-color: #02cfb4;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff; /* White text color on focus */
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ccc;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #ccc;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #ccc;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #ccc;
+    opacity: 1;
+}
+
+.nameInput span,
+.emailInput span,
+.textareaInput span {
+    color: #8491a2;
+    font-size: 14px;
+    position: absolute;
+    pointer-events: none;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: top 0.3s, font-size 0.3s;
+}
+
+.nameInput input:focus + span,
+.emailInput input:focus + span,
+.textareaInput textarea:focus + span {
+    top: -20px;
+    font-size: 12px;
+    color: #02cfb4; /* Highlight color for label on focus */
+}
+
+#contactForm p.helpBlock {
+    color: #00d7bb;
+    margin-bottom: 0;
+}
+
+#contactForm .alertAlertDanger {
+    background-color: #313741;
+    color: #02cfb4;
+    font-weight: 300 !important;
+    border: none;
+    padding: 10px;
+}
+
+#contactForm .alertSuccess {
+    color: #00F29A;
+    background-color: #313741;
+    border-color: #313741;
+}
+
+.contactForm button.close {
+    margin-top: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    margin-right: 40px;
+    border-radius: 50%;
+    color: #fff;
+    background: #17D397;
+    opacity: 1;
+}
