@@ -7,54 +7,40 @@ const ContactMe = () => {
             <div className={`row ${styles.contactRow}`}>
                 <div className="col-md-12">
                     <div className={`${styles.sectionTitle}`}>
-                        <h2 className={`text-center ${styles.contactHeading} ${styles.sectionh2}`}>Contact Me</h2>
+                        <h2 className={`text-center ${styles.contactHeading}`}>Contact Me</h2>
                     </div>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-md-12">
-                    <div className={`${styles.contactForm}`}>
-                        <form name="sentMessage" id="contactForm" noValidate>
-                            <div className="row">
-                                <div className="col-md-6 col-sm-6 col-xs-12">
-                                    <div className={`${styles.nameInput}`}>
-                                        <div className="form-group">
-                                            <input placeholder='Name*' type="text" className="form-control" id="name" required aria-invalid="false" />
-                                            <p className={`${styles.helpBlock} text-danger`}></p>
-                                        </div>
-                                        <span>Name *</span>
-                                    </div>
-                                </div>
-                                <div className="col-md-6 col-sm-6 col-xs-12">
-                                    <div className={`${styles.emailInput}`}>
-                                        <div className="form-group">
-                                            <input type="email" className="form-control" id="email" required />
-                                            <p className={`${styles.helpBlock} text-danger`}></p>
-                                            <span>Email *</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <div className={`${styles.textareaInput}`}>
-                                        <div className="form-group">
-                                            <textarea className="form-control" id="message" required></textarea>
-                                            <p className={`${styles.helpBlock} text-danger`}></p>
-                                            <span>Message *</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="clearfix"></div>
-                                <div className="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button type="submit" className="contact-btn">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            <div className={`row ${styles.contactInfo}`}>
+                <div className={`col ${styles.infoCard}`}>
+                    <i className={`fas fa-phone ${styles.infoIcon}`}></i>
+                    <p>+ (669) 295 87 37</p>
                 </div>
+                <div className={`col ${styles.infoCard}`}>
+                    <i className={`fas fa-envelope ${styles.infoIcon}`}></i>
+                    <p><a className={`${styles.contactEmailText}`} href="mailto:khtrivedi84@gmail.com">khtrivedi84@gmail.com</a></p>
+                </div>
+                <div className={`col ${styles.infoCard}`}>
+                    <i className={`fas fa-map-marker-alt ${styles.infoIcon}`}></i>
+                    <p>431 El Camino Real, Santa Clara, CA</p>
+                </div>
+            </div>
+            <div className={styles.contactForm}>
+                <form>
+                    <div className={`${styles.formGroup}`}>
+                        <input type="text" id="name" className={`${styles.formControl}`} required />
+                        <label htmlFor="name" className={styles.formLabel}>Name</label>
+                    </div>
+                    <div className={`${styles.formGroup}`}>
+                        <input type="email" id="email" className={`${styles.formControl}`} required />
+                        <label htmlFor="email" className={styles.formLabel}>Email</label>
+                    </div>
+                    <div className={`${styles.formGroup} ${styles.formGroupTextarea}`}>
+                        <textarea id="message" className={`${styles.formControl}`} rows="5" required></textarea>
+                        <label htmlFor="message" className={styles.formLabel}>Message</label>
+                    </div>
+                    <button type="submit" className={`btn ${styles.submitBtn}`}>Send Message</button>
+                </form>
             </div>
         </div>
     );

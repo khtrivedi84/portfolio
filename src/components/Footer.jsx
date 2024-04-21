@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <p className={styles.footerText}>© 2021 - Designed by <a href="" className={styles.footerLink}>Sara</a></p>
+                        <p className={styles.footerText}>© 2024 - Designed by <a href="" className={styles.footerLink}>Kishan Trivedi</a></p>
                     </div>
                 </div>
             </div>
