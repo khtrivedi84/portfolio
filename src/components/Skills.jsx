@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import styles from './Skills.module.css';
 import pythonLogo from '../images/logos/python_logo.png';
 import javascriptLogo from '../images/logos/js_logo.png';
@@ -6,6 +6,7 @@ import reactLogo from '../images/logos/react_logo.png';
 import flaskLogo from '../images/logos/flask_logo.png';
 import cssLogo from '../images/logos/css_logo.png';
 import mongodbLogo from '../images/logos/mongodb_logo.png';
+import SkillItem from './SkillItem';
 
 const skillsData = [
     {
@@ -54,27 +55,9 @@ const skillsData = [
         ]
     }
 ];
-
 const Skills = () => {
-    const ref = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();  // Optionally disconnect observer after the element is visible
-                }
-            });
-        }, { threshold: 0.5 }); // Setting threshold to 50%
-
-        observer.observe(ref.current);
-        return () => observer.disconnect();
-    }, []);
-
     return (
-        <div id='pro-skills-area' className={styles.skillsSection} ref={ref}>
+        <div id='pro-skills-area' className={styles.skillsSection}>
             <div className={styles.skillsAreaTop}>
                 <div className="container justify-content-center text-center text-light">
                     <h2 className={`${styles.sectionTitle} ${styles.sectionh2}`}>Skills</h2>
@@ -84,19 +67,12 @@ const Skills = () => {
                 <div className="container-fluid">
                     <div className={styles.skillsContent}>
                         <div className="row justify-content-center">
-                            {skillsData.map((group, index) => (
-                                <div className={`col-md-2  col-sm-6 col-xs-12 ${index % 2 !== 0 ? styles.floatRight : ''} ${styles.categoryBackground}`}>
+                            {skillsData.map((group, groupIndex) => (
+                                <div key={groupIndex} className={`col-md-2 col-sm-6 col-xs-12 ${groupIndex % 2 !== 0 ? styles.floatRight : ''} ${styles.categoryBackground}`}>
                                     <h5 className="text-light text-center mb-4">{group.category}</h5>
                                     <div className={`${styles.skillst5} ${styles.category}`}>
                                         {group.skills.map((skill, skillIndex) => (
-                                            <div>
-                                                <div className={`${styles.skills__item} skills__item--html ${styles.skills__item_fade_in}`}>
-                                                    <img className={``} src={skill.path} alt={group.skills.name}/>
-                                                    <div className={`${styles.skills__item_name}`}>
-                                                        {skill.name}
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <SkillItem key={`${groupIndex}-${skillIndex}`} skill={skill} />
                                         ))}
                                     </div>
                                 </div>
@@ -107,6 +83,6 @@ const Skills = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Skills;

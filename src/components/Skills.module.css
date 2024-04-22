@@ -53,3 +53,33 @@
     border-radius: 10px;
     margin: 10px;
 }
+
+/* Existing styles remain the same */
+
+.skills__item {
+    /* Add initial opacity and transition for smooth animation */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px); /* Initial position */
+}
+
+.isVisible {
+    /* Make the skill visible and slide up */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.skills__item.slideIn {
+    animation: slideInUp 0.5s ease-out forwards;
+}
