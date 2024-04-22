@@ -6,7 +6,7 @@ import profile from "../images/profile/final2.png";
 const AboutMe = () => {
 
     const { ref, inView } = useInView({
-        threshold: 0.5, // Trigger when 50% of the element is in view
+        threshold: 0.3, // Trigger when 30% of the element is in view
         triggerOnce: true // Only trigger once
         });
   useEffect(() => {
