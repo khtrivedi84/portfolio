@@ -103,7 +103,8 @@
 .cdTimelineContent {
     position: relative;
     margin-left: 60px;
-    background: white;
+    background: transparent;
+    color: white;
     border-radius: 0.25em;
     padding: 1em;
     -webkit-box-shadow: 0 3px 0 #d7e4ed;
@@ -146,7 +147,7 @@
     color: #fff;
     font-size: 14px;
     line-height: 25px;
-    opacity: 1;
+    opacity: 0;
     padding: 0;
     text-align: left;
 }
@@ -334,4 +335,95 @@
 
 .experienceContent .cdTimelineBlock:last-child {
     margin-bottom: 0 !important;
+}
+
+/* Animations for heading */
+@keyframes slideFromLeftHeading {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRightHeading {
+    from {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animations for description */
+@keyframes slideFromLeftDescription {
+    from {
+        transform: translate(-180%, -30%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-122%, -30%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRightDescription {
+    from {
+        transform: translate(180%, -35%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(122%, -35%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRightMobile {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cdHeading {
+    color: #00d7bb;
+    opacity: 0;
+}
+
+
+/* Applying animations based on index (even/odd) */
+.slideInFromLeftHeading {
+    animation: slideFromLeftHeading 0.5s ease-out forwards;
+}
+
+.slideInfromRightHeading {
+    animation: slideFromRightHeading 0.5s ease-out forwards;
+}
+
+.slideInFromLeftDescription {
+    animation: slideFromLeftDescription 0.5s ease-out forwards;
+}
+
+.slideInFromRightDescription {
+    animation: slideFromRightDescription 0.5s ease-out forwards;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .slideInfromRightHeading, 
+    .slideInFromRightDescription,
+    .slideInFromLeftHeading,
+    .slideInFromLeftDescription{
+        animation-name: slideFromRightMobile;
+    }
 }
