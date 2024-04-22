@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef }  from 'react';
 import { useInView } from 'react-intersection-observer';
 import styles from './Experience.module.css';
 
@@ -8,14 +8,24 @@ const ExperienceItem = ({ experience, index, expandedId, setExpandedId }) => {
         triggerOnce: true
     });
 
-    const [refDescription, inViewDescription] = useInView({
-        threshold: 0.5,
-        triggerOnce: true
-    });
+    const descriptionNode = useRef(null); 
 
     const handleExpand = (id) => {
         setExpandedId(id === expandedId ? null : id); // Toggle expanded state
     };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (descriptionNode.current && !descriptionNode.current.contains(event.target)) {
+                setExpandedId(null); // Collapse the description
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [setExpandedId, expandedId]);
 
     const renderDescription = (description, id) => {
         const points = description.split('•').filter(point => point.trim());
@@ -49,7 +59,7 @@ const ExperienceItem = ({ experience, index, expandedId, setExpandedId }) => {
                     <h2>{experience.title}</h2>
                     <p>{experience.date} | <span>{experience.company}</span></p>
                 </div>
-                <div ref={refDescription} className={`${styles.cdDescription} ${inViewDescription ? (isEven ? styles.slideInFromRightDescription : styles.slideInFromLeftDescription) : ''}`}>
+                <div ref={refHeading} className={`${styles.cdDescription} ${inViewHeading ? (isEven ? styles.slideInFromRightDescription : styles.slideInFromLeftDescription) : ''}`}>
                     {renderDescription(experience.description, experience.id)}
                 </div>
             </div>
