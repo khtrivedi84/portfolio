@@ -35,7 +35,10 @@ const EducationItem = ({ experience, index, expandedId, setExpandedId }) => {
         return (
             <ul>
                 {itemsToShow.map((point, index) => (
+                    <>
                     <li key={index}>{point.trim()}</li>
+                    <br></br>
+                    </>
                 ))}
                 {showMore && (
                     <li>

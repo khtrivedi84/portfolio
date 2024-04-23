@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from './Projects.module.css';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import ProjectModal from './ProjectModal';
 import e_commerce from '../images/e_commerce/e_commerce.png';
 import e_commerce_landing from '../images/e_commerce/landing.png';
@@ -118,14 +119,49 @@ const projectList = [
   }
 ];
 
-const cardVariants = {
-  hover: {
-    translateY: -15,
-    boxShadow: '0px 10px 20px rgba(255, 255, 255, 0.3)',
-    transition: {
-      duration: 0.2,
-    },
-  }
+const ProjectCard = ({ project, index, openModal }) => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      custom={index}
+      variants={{
+        hidden: { opacity: 0, translateY: 50 },
+        visible: {
+          opacity: 1,
+          translateY: 0,
+          transition: { delay: index * 0.2, type: 'spring', stiffness: 120 }
+        },
+      }}
+      className={`col-lg-3 col-md-4 col-sm-6 ${styles.card2} mx-md-3`}
+      onClick={() => openModal(project)}
+    >
+      <div className={`${styles.cardImageContainer}`}>
+        <img src={project.thumbnail} alt={project.title} className={styles.cardImage} />
+        <div className={styles.overlay_card}>
+          <div className={styles.lBorderTopLeft}></div>
+          <div className={styles.lBorderBottomRight}></div>
+        </div>
+      </div>
+      <div className={styles.cardBody}>
+        <h5 className={styles.cardTitle}>{project.title}</h5>
+        <p className={styles.cardDescription}>{project.short_description}</p>
+      </div>
+    </motion.div>
+  );
 };
 
 const Projects = () => {
@@ -144,34 +180,26 @@ const Projects = () => {
 
   return (
     <div id="projects" className={`container justify-content-center mt-4 ${styles.projectsContainer}`}>
+      <h2 className={`text-center mt-4 text-light ${styles.sectionh2}`}>Projects</h2>
       <div className={`row ${styles.cardsRow}`}>
-        <h2 className={`text-center mt-4 text-light ${styles.sectionh2}`}>Projects</h2>
-        {projectList.map((project) => (
-          <motion.div
+        {projectList.map((project, index) => (
+          <ProjectCard
             key={project.id}
-            className={`col-lg-3 col-md-4 col-sm-6 ${styles.card2} mx-md-3`}
-            variants={cardVariants}
-            whileHover="hover"
-            onClick={() => openModal(project)}
-          >
-            <div className={`${styles.cardImageContainer}`}>
-              <img src={project.thumbnail} alt={project.title} className={styles.cardImage} />
-              <div className={styles.overlay_card}>
-                  <FaEye  className={`${styles.overlayIcon} d-none d-lg-block`} />
-                  <div className={styles.lBorderTopLeft}></div>
-                  <div className={styles.lBorderBottomRight}></div>
-              </div>
-            </div>
-            <div className={styles.cardBody}>
-              <h5 className={styles.cardTitle}>{project.title}</h5>
-              <p className={styles.cardDescription}>{project.short_description}</p>
-            </div>
-          </motion.div>
+            project={project}
+            index={index}
+            openModal={openModal}
+          />
         ))}
       </div>
-      <ProjectModal isOpen={modalIsOpen} closeModal={closeModal} project={selectedProject} />
+      {selectedProject && (
+        <ProjectModal
+          isOpen={modalIsOpen}
+          closeModal={closeModal}
+          project={selectedProject}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default Projects;
