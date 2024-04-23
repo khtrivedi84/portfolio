@@ -127,3 +127,20 @@
 .scrolled .resumeBtn:hover, .scrolled .resumeBtn:focus {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.30)); /* Darker gradient on hover when scrolled */
 }
+
+.navbar-collapse.collapse {
+    display: block !important;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+  }
+  
+  .navbar-collapse.collapsing {
+    height: auto !important;
+    transition: height 0.35s ease;
+  }
+  
+  .navbar-collapse.show {
+    height: auto !important;
+    overflow: auto;
+  }
