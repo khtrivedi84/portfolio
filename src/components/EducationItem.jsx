@@ -4,7 +4,7 @@ import styles from './Education.module.css';
 
 const EducationItem = ({ experience, index, expandedId, setExpandedId }) => {
     const [refHeading, inViewHeading] = useInView({
-        threshold: 0.4,
+        threshold: 0.25,
         triggerOnce: true
     });
 
