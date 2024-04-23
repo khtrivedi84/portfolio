@@ -24,7 +24,7 @@ const SocialMedia = () => {
                 <span style={{color:"black"}}><SiGmail /></span>
             </li>
             </a>
-            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1aRb47poQkuLuKw1tninAqBPxaka6spd3/view?usp=sharing" style={{textDecoration:"none"}}>
+            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1P0B_FRNGSqztA10NwA_pNFCcHBN3hKub/view?usp=sharing" style={{textDecoration:"none"}}>
             <li className={`${styles.icon2} ${styles.resume}`}>
                 <span className={`${styles.tooltip}`}>Resume</span>
                 <span className={`${styles.resumeButton}`} style={{color:"black"}}>Resume {'\u00A0'}<FaDownload /></span>
