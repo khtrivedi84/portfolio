@@ -61,12 +61,6 @@ function enableScroll() {
   }, 0); // Re-enable smooth scrolling after the instant jump
 }
 
-function preventScroll(e) {
-  e.preventDefault(); // This prevents the default scroll behavior
-  e.stopPropagation(); // This stops the event from bubbling up
-}
-
-
 const ProjectModal = ({ isOpen, closeModal, project }) => {
   useEffect(() => {
     if (isOpen) {
