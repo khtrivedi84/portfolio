@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Modal from 'react-modal';
 import Carousel from 'react-bootstrap/Carousel';
 import {FaGithub} from "react-icons/fa";
@@ -38,7 +38,37 @@ const tech_map = {
   'Express': "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
 };
 
+function disableScroll() {
+  // Add event listener to window's scroll events
+  const scrollY = window.scrollY; // capture current scroll position
+  document.body.style.top = `-${scrollY}px`; // set top to negative of scrollY
+  document.body.classList.add("disable-scrolling");
+}
+
+function enableScroll() {
+  const scrollY = document.body.style.top;
+  document.body.classList.remove('disable-scrolling'); // remove the class to restore flow
+  document.body.style.top = ''; // reset top style
+  window.scrollTo(0, parseInt(scrollY || '0') * -1); // restore the scroll position
+}
+
+function preventScroll(e) {
+  e.preventDefault(); // This prevents the default scroll behavior
+  e.stopPropagation(); // This stops the event from bubbling up
+}
+
+
 const ProjectModal = ({ isOpen, closeModal, project }) => {
+  useEffect(() => {
+    if (isOpen) {
+      disableScroll();
+    } else {
+      enableScroll();
+    }
+
+    // Cleanup function to ensure scroll is enabled and reset when the component unmounts
+    return () => enableScroll();
+  }, [isOpen]);
 
   if (!project) return null;
 

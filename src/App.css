@@ -34,3 +34,10 @@ html {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
+.disable-scrolling{
+    height: 100%;
+    overflow: hidden;
+    background: black;
+    position: fixed;
+}
