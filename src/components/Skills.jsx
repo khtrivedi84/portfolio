@@ -57,7 +57,7 @@ const skillsData = [
 ];
 const Skills = () => {
     return (
-        <div id='pro-skills-area' className={styles.skillsSection}>
+        <div tabIndex={0} aria-label='skills section' id='pro-skills-area' className={styles.skillsSection}>
             <div className={styles.skillsAreaTop}>
                 <div className="container justify-content-center text-center text-light">
                     <h2 className={`${styles.sectionTitle} ${styles.sectionh2}`}>Skills</h2>

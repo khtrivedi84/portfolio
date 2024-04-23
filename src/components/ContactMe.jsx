@@ -21,7 +21,7 @@ const ContactMe = () => {
     }
 
     return (
-        <div id="contact" className={`container justify-content-center mt-4 ${styles.contactContainer}`}>
+        <div id="contact" tabIndex={0} aria-label='contact me section' className={`container justify-content-center mt-4 ${styles.contactContainer}`}>
             <div className={`row ${styles.contactRow}`}>
                 <div className="col-md-12">
                     <div className={`${styles.sectionTitle}`}>
@@ -36,7 +36,7 @@ const ContactMe = () => {
                 </div>
                 <div className={`col ${styles.infoCard}`}>
                     <i className={`fas fa-envelope ${styles.infoIcon}`}></i>
-                    <p><a className={`${styles.contactEmailText}`} href="mailto:khtrivedi84@gmail.com">khtrivedi84@gmail.com</a></p>
+                    <p><a aria-label='email to khtrivedi84@gmail.com' className={`${styles.contactEmailText}`} href="mailto:khtrivedi84@gmail.com">khtrivedi84@gmail.com</a></p>
                 </div>
                 <div className={`col ${styles.infoCard}`}>
                     <i className={`fas fa-map-marker-alt ${styles.infoIcon}`}></i>

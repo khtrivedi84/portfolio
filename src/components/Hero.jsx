@@ -6,7 +6,7 @@ import { FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
     return(
-        <div id="hero" className={`row justify-content-center align-items-center`} style={{height:"100vh"}}>
+        <div id="hero" tabIndex={0} aria-label='Hero section' className={`row justify-content-center align-items-center`} style={{height:"100vh"}}>
             <motion.div 
                 className={`col-sm-10 col-md-9 text-light text-center position-relative ${styles.mobileTop}`}
                 initial={{ opacity: 0, y: 30 }}

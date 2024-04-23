@@ -66,13 +66,13 @@
     margin-top: 5% !important;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width:1068px) {
     .mobileMargin {
       margin-top: 25% !important;
     }
   }
 
-  @media (max-width: 993px) {
+  @media (max-width: 1068px) {
     .mobileTop {
       margin-top: 0% !important;
     }
@@ -84,7 +84,7 @@
   border: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1068px) {
   .scrollMore {
     position: absolute !important;
     text-decoration: none !important;
@@ -92,7 +92,7 @@
   }
 }
 
-@media (min-width: 993px) {
+@media (min-width: 1068px) {
   .scrollMore {
     color: #fff !important;
     position: absolute !important;
@@ -109,14 +109,14 @@
     border: none;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1068px) {
     .scrollMore2 {
       position: relative;
       left: 47.5% !important;
     }
   }
 
-  @media (min-width: 993px) {
+  @media (min-width: 1068px) {
     .scrollMore2 {
       right: 0 !important;
       top: 50% !important;
@@ -152,7 +152,7 @@
   }
 }
 
-@media (min-width:993px) {
+@media (min-width:1068px) {
   .scrollMoreDesktop {
     display: flex;
     position: absolute;
@@ -164,7 +164,7 @@
   }
 }
 
-@media (max-width:992px) {
+@media (max-width:1068px) {
   .scrollMoreMobile {
     display: flex !important;
     flex-basis: content;

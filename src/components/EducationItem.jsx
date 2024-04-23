@@ -42,7 +42,7 @@ const EducationItem = ({ experience, index, expandedId, setExpandedId }) => {
                 ))}
                 {showMore && (
                     <li>
-                        <a className={styles.readMoreButton} onClick={() => handleExpand(id)}>
+                        <a tabIndex={0} aria-label='read more' className={styles.readMoreButton} onClick={() => handleExpand(id)}>
                             read more
                         </a>
                     </li>

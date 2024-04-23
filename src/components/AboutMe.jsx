@@ -18,7 +18,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div ref={ref} id="aboutme" className={`${styles.centerDiv} container`}>
+    <div ref={ref} tabIndex={0} aria-label='About me section' id="aboutme" className={`${styles.centerDiv} container`}>
         <div className={`row justify-content-center align-items-center text-white`}>
             <h2 className={`text-center text-light ${styles.sectionh2}`} style={{marginBottom:"2rem"}}>About Me</h2>
             <div className={`col-md-6 justify-content-center d-flex mb-4`}>

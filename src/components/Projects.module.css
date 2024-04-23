@@ -96,28 +96,22 @@
     }
   }
 
-  @media (min-width: 992px) {
-    
-   .overlay_card {
-    position: absolute;
-    max-height: 446px;
-    max-width: 440px;
-    height: 100%;
-    width: 100%;
-    /* background: rgba(0, 0, 0, 0.4); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out;
-    transform: translateX(-10px);
-    border-radius: 18px;
+
+  .card2:hover {
+    opacity: 1;
+    animation: zoomIn 0.5s forwards;
   }
-    .card2:hover .overlay_card {
-      opacity: 1;
+
+  @keyframes zoomIn {
+    from {
+      transform: translateY(0);
+
     }
-    .overlayIcon {
-      color: white;
-      font-size: 1.5rem;
-    } 
+    to {
+      transform: translateY(-10px);
+    }
   }
+  .overlayIcon {
+    color: white;
+    font-size: 1.5rem;
+  } 

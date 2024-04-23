@@ -32,6 +32,16 @@ const ExperienceItem = ({ experience, index, expandedId, setExpandedId }) => {
         const showMore = points.length > 3 && expandedId !== id;
         const itemsToShow = showMore ? points.slice(0, 2) : points;
 
+        const handleKeyDown = (event, id) => {
+            // Check if Enter or Space key is pressed
+            if (event.key === 'Enter' || event.key === ' ') {
+              // Prevent the default action to stop scrolling when space is pressed
+              event.preventDefault();
+              // Simulate the click action
+              handleExpand(id);
+            }
+          };
+
         return (
             <ul>
                 {itemsToShow.map((point, index) => (
@@ -39,7 +49,7 @@ const ExperienceItem = ({ experience, index, expandedId, setExpandedId }) => {
                 ))}
                 {showMore && (
                     <li>
-                        <a className={styles.readMoreButton} onClick={() => handleExpand(id)}>
+                        <a tabIndex={0} aria-label='read more' onKeyDown={(event) => handleKeyDown(event, id)} className={styles.readMoreButton} onClick={() => handleExpand(id)}>
                             read more
                         </a>
                     </li>

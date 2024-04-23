@@ -119,6 +119,7 @@ const projectList = [
   }
 ];
 
+
 const ProjectCard = ({ project, index, openModal }) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -131,6 +132,17 @@ const ProjectCard = ({ project, index, openModal }) => {
       controls.start('visible');
     }
   }, [controls, inView]);
+
+  const handleKeyDown = (event, project) => {
+    // Check if Enter or Space key is pressed
+    if (event.key === 'Enter' || event.key === ' ') {
+      // Prevent the default action to stop scrolling when space is pressed
+      event.preventDefault();
+      // Simulate the click action
+      openModal(project);
+    }
+  };
+  
 
   return (
     <motion.div
@@ -148,13 +160,12 @@ const ProjectCard = ({ project, index, openModal }) => {
       }}
       className={`col-lg-3 col-md-4 col-sm-6 ${styles.card2} mx-md-3`}
       onClick={() => openModal(project)}
+      tabIndex={0}
+      onKeyDown={(event) => handleKeyDown(event, project)}
+      aria-label={`View project details for ${project.title}`}
     >
       <div className={`${styles.cardImageContainer}`}>
         <img src={project.thumbnail} alt={project.title} className={styles.cardImage} />
-        <div className={styles.overlay_card}>
-          <div className={styles.lBorderTopLeft}></div>
-          <div className={styles.lBorderBottomRight}></div>
-        </div>
       </div>
       <div className={styles.cardBody}>
         <h5 className={styles.cardTitle}>{project.title}</h5>
@@ -179,7 +190,7 @@ const Projects = () => {
   };
 
   return (
-    <div id="projects" className={`container justify-content-center mt-4 ${styles.projectsContainer}`}>
+    <div id="projects" tabIndex={0} aria-label='projects section' className={`container justify-content-center mt-4 ${styles.projectsContainer}`}>
       <h2 className={`text-center mt-4 text-light ${styles.sectionh2}`}>Projects</h2>
       <div className={`row ${styles.cardsRow}`}>
         {projectList.map((project, index) => (

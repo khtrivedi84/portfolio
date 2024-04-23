@@ -22,7 +22,7 @@ const Header = () => {
     return(
         <center>
         <nav className={`navbar navbar-expand-lg ${styles.setPadding} ${scrolled ? styles.scrolled : ''}`}>
-                <a href="/" className={`navbar-brand mx-3 ${styles.profilePicture}`}>
+                <a aria-label='KT logo' href="/" className={`navbar-brand mx-3 ${styles.profilePicture}`}>
                     <img src={profile} alt="Profile" className="img-fluid rounded-circle d-md-block" style={{borderRadius:"50%", height:"38px", width:"40px"}} />
                 </a>
                 <button className={`navbar-toggler ${styles.navbarToggler} mx-2`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +30,13 @@ const Header = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className={`navbar-nav nav-pills justify-content-center w-100 ${styles.headerBackground} ${styles.new_ul}`}>
-                        <a href="#hero" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaHome /> Home</li></a>
-                        <a href="#aboutme" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><TiUser /> About</li></a>
-                        <a href="#pro-skills-area" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCode /> Skills</li></a>
-                        <a href="#experience" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaSuitcase /> Experience</li></a>
-                        <a href="#education" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaGraduationCap /> Education</li></a>
-                        <a href="#projects" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCodeBranch /> Projects</li></a>
-                        <a href="#contact" className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><IoMdContact /> Contact Me</li></a>
+                        <a href="#hero" aria-label='Home' className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaHome /> Home</li></a>
+                        <a href="#aboutme" aria-label='About' className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><TiUser /> About</li></a>
+                        <a href="#pro-skills-area" aria-label='Skills' className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCode /> Skills</li></a>
+                        <a href="#experience" aria-label='Experience' className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaSuitcase /> Experience</li></a>
+                        <a href="#education" aria-label='Education' className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaGraduationCap /> Education</li></a>
+                        <a href="#projects" aria-label='Projects' className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><FaCodeBranch /> Projects</li></a>
+                        <a href="#contact" aria-label='Contact me' className={`nav-link ${styles.customNavLink}`} ><li className="nav-item"><IoMdContact /> Contact Me</li></a>
                     </ul>
                 </div>
         </nav>
