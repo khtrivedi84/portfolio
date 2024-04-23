@@ -143,7 +143,7 @@ const ProjectCard = ({ project, index, openModal }) => {
         visible: {
           opacity: 1,
           translateY: 0,
-          transition: { delay: index * 0.2, type: 'spring', stiffness: 120 }
+          transition: { delay: index * 0.1, type: 'spring', stiffness: 120 }
         },
       }}
       className={`col-lg-3 col-md-4 col-sm-6 ${styles.card2} mx-md-3`}
