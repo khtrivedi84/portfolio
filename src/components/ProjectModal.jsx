@@ -49,7 +49,16 @@ function enableScroll() {
   const scrollY = document.body.style.top;
   document.body.classList.remove('disable-scrolling'); // remove the class to restore flow
   document.body.style.top = ''; // reset top style
-  window.scrollTo(0, parseInt(scrollY || '0') * -1); // restore the scroll position
+
+  // Temporarily disable smooth scrolling
+  document.documentElement.style.scrollBehavior = 'auto'; // disable smooth scroll
+
+  window.scrollTo(0, parseInt(scrollY || '0') * -1); // restore the scroll position instantly
+
+  // Re-enable smooth scrolling
+  setTimeout(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, 0); // Re-enable smooth scrolling after the instant jump
 }
 
 function preventScroll(e) {
