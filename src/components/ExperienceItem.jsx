@@ -50,7 +50,7 @@ const ExperienceItem = ({ experience, index, expandedId, setExpandedId }) => {
                 {showMore && (
                     <li>
                         <a tabIndex={0} aria-label='read more' onKeyDown={(event) => handleKeyDown(event, id)} className={styles.readMoreButton} onClick={() => handleExpand(id)}>
-                            read more
+                            ...read more
                         </a>
                     </li>
                 )}

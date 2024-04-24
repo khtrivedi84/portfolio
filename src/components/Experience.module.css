@@ -171,6 +171,7 @@
 .readMoreButton {
     cursor: pointer;
     color: #00d7bb;
+    text-decoration: none;
 }
 
 .cdDescription ul {

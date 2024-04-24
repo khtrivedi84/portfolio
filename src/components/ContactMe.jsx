@@ -40,7 +40,7 @@ const ContactMe = () => {
                 </div>
                 <div className={`col ${styles.infoCard}`}>
                     <i className={`fas fa-map-marker-alt ${styles.infoIcon}`}></i>
-                    <p>431 El Camino Real, Santa Clara, CA</p>
+                    <p>United States</p>
                 </div>
             </div>
             <div className={styles.contactForm}>
