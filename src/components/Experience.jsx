@@ -3,7 +3,7 @@ import ExperienceItem from './ExperienceItem'; // Make sure to import Experience
 import styles from './Experience.module.css';
 
 const experiences = [
-    { id: 1, title: "App Developer", date: "Jan 2024 - Present", company: "Frugal Innovation Hub", description: `
+    { id: 1, title: "Software Engineer", date: "Jan 2024 - Present", company: "Frugal Innovation Hub", description: `
     • Lead a five-person team in Library Management App development for 38 libraries across 3 African countries.
     • Develop user interfaces, framework components, and backend scripts to enable comprehensive and well-styled web applications.
     • Convert Figma prototypes into fully functional, dynamic web pages. Utilized ReactJS, Redux, and NodeJS for development.
