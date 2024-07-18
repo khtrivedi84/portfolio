@@ -4,31 +4,39 @@ import styles from './Experience.module.css';
 
 const experiences = [
     { id: 1, title: "App Developer", date: "Jan 2024 - Present", company: "Frugal Innovation Hub", description: `
-    • Led five-person team in Library Management App development for 38 libraries across Burkina Faso, Ghana and Uganda.
-    • Developed user-friendly mobile application with Flutter and Dart that improved library management efficiency.
-    • Created prototypes and wireframes in Figma and conducted user testing to gather feedback and improve user experience.
-    • Leveraged AWS RDS to manage database and AWS Lambda for serverless computing, resulting in 30% cost savings.
-    • Collaborated with stakeholders, including librarians and community members, to gather requirements and ensure user satisfaction.
-    • Followed Agile methodology to deliver project milestones on time, resulting in faster project completion.  
+    • Lead a five-person team in Library Management App development for 38 libraries across 3 African countries.
+    • Develop user interfaces, framework components, and backend scripts to enable comprehensive and well-styled web applications.
+    • Convert Figma prototypes into fully functional, dynamic web pages. Utilized ReactJS, Redux, and NodeJS for development.
+    • Conduct user testing to gather feedback and improve user experience.
+    • Routinely conduct peer code reviews to guarantee optimal performance and defect-free project development
+    • Integrate REST APIs for user authentication, data retrieval, and transaction processing, ensuring secure and efficient communication between the frontend and backend systems.
+    • Write complex SQL queries and integrated them into frontend applications to enable dynamic data retrieval and display.
+    • Implement version control using Git and established CI/CD pipelines with GitHub Actions to automate and streamline the deployment process.
+    • Maintain and debug software using logging to enhance system stability and performance.
+    • Collaborate with cross-functional teams, including designers, product managers, and QA engineers, within an Agile framework to ensure cohesive and high-quality application development.  
     ` },
 
     { id: 2, title: "Web Developer", date: "Jul 2022 - Dec 2023", company: "Santa Clara University", description: `
-    • Developed and maintained 50+ reusable components in a CMS environment, integrating database integration and server‐side scripting.
+    • Leveraged JavaScript ES6, HTML, CSS, and Bootstrap to develop responsive and visually consistent components, aligning with brand design guidelines. Integrated with database using SQL queries.
+    • Developed and maintained 200+ re-usable components in a CMS environment, with database integration and server‐side scripting
     • Created a custom "Related Articles" component using Vanilla JavaScript(ES6), SQL, PHP, and AJAX, resulting in a 15% increase in user engagement.
+    • Ensured accessibility by adhering to WCAG 2.2, W3C, and ARIA standards, using tools such as Axe, Lighthouse, WAVE, NVDA, JAWS, and Voiceover to validate and optimize web content for inclusivity.
     • Utilized front‐end technologies (JavaScript, HTML/CSS) to ensure seamless functionality of the components
-    • Employed performance optimization techniques, such as asynchronous loading and lazy loading, resulting in a notable 20% improvement in page load speed,
-    benefiting over 200,000 monthly visitors.
-    • Utilized Google Analytics to track user behavior and inform decision‐making processes, demonstrating data‐driven approach to web development
+    • Employed performance optimization techniques, such as Caching, Lazy Loading, CDN, Asynchronous loading, Minification, resulting in a notable 20% improvement in page load speed, benefiting over 200,000 monthly visitors.
+    • Utilized Google Analytics to track user behavior and inform decision‐making processes, demonstrating data‐driven approach to web development.
+    • Communicated effectively with third-party vendors and different teams to resolve support tickets and provided support
     • Facilitated efficient cross‐functional collaboration utilizing Slack and Asana task management, ensuring smooth project coordination and timely deliverables` },
     
     { id: 3, title: "Software Engineer", date: "Aug 2019 - Sep 2021", company: "Rajat IT Consultancy", description: `
-    • Spearheaded the development of a real‐time notification system using Django Channels for a health and fitness‐based web portal, enabling prompt commu‐
-    nication between users and enhancing user engagement
-    • Integrated 30+ REST APIs for client‐specific services, enabling seamless communication between the application and external systems
-    • Optimized database queries and implemented Redis caching, leveraging indexing & query optimization techniques to enhance system responsiveness by 40%
-    • Proactively monitored system health using AWS ELK Stack, identifying and resolving issues to achieve a 70% reduction in downtime
-    • Enhanced backend infrastructure with Docker adoption, enabling a 20% improvement in scalability potential
-    • Established Git version control and workflows to streamline code management and development processes, minimizing conflicts and maximizing efficiency` },
+    • Created robust web applications with Python and Java frameworks, employing the MVC/MVT architecture to ensure modularity.
+    • Spearheaded the development of a real‐time notification system using Django Channels for a health and fitness‐based web portal, enabling prompt communication between users and enhancing user engagement.
+    • Led a React upgrade from v14 to v16.8 by introducing hooks, restructuring legacy code, and converting class components to functional components for improved state management.
+    • Designed and integrated 200+ REST APIs with AWS API Gateway, and developed microservices architecture, enhancing data interoperability, scalability, and fault tolerance.
+    • Enhanced system responsiveness by 40% with optimized SQL queries and effective caching strategies.
+    • Diagnosed and debugged software problems, employing logging and automated testing to ensure system stability.
+    • Engaged in the assessment and resolution of issue tickets for both new and legacy components.
+    • Established Git version control to streamline code management, minimizing conflicts and maximizing efficiency.
+    ` },
 ];
 const Experience = () => {
     const [expandedId, setExpandedId] = useState(null);
