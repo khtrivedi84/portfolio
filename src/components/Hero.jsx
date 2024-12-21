@@ -29,7 +29,7 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.8 }}
                 >
-                    Software Engineer | Web Developer | AI and ML Enthusiast
+                    Data Engineer | Software Engineer | Web Developer
                 </motion.p>
                 <div style={{height:"75px"}}></div>
                 <SocialMedia />
