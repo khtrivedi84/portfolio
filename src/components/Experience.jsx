@@ -3,7 +3,17 @@ import ExperienceItem from './ExperienceItem'; // Make sure to import Experience
 import styles from './Experience.module.css';
 
 const experiences = [
-    { id: 1, title: "Software Engineer", date: "Jan 2024 - Present", company: "Frugal Innovation Hub", description: `
+    { id: 1, title: "Data Engineer", date: "Dec 2024 - Present", company: "Capital One", description: `
+    • Designed and implemented ETL pipelines to process and transform large datasets, ensuring data accuracy and efficiency.
+    • Established and maintained data lineage frameworks to enhance traceability and governance across critical banking datasets.
+    • Developed optimized SQL queries to extract insights and support data-driven decision-making for retail banking analytics.
+    • Built and maintained Spark-based data processing workflows to handle high-volume transactional data.
+    • Leveraged AWS services (e.g., S3, Glue, Redshift, EMR) to create scalable and cost-efficient data storage and processing solutions.
+    • Conducted detailed data analysis to identify trends and support business strategies for customer engagement and product offerings.
+    • Collaborated with cross-functional teams to implement data governance policies and ensure compliance with financial regulations.
+    • Automated and optimized data workflows to improve processing efficiency and reduce operational overhead.
+    ` },
+    { id: 2, title: "Software Engineer", date: "Jan 2024 - Dec 2024", company: "Frugal Innovation Hub", description: `
     • Lead a five-person team in Library Management App development for 38 libraries across 3 African countries.
     • Develop user interfaces, framework components, and backend scripts to enable comprehensive and well-styled web applications.
     • Convert Figma prototypes into fully functional, dynamic web pages. Utilized ReactJS, Redux, and NodeJS for development.
@@ -16,26 +26,20 @@ const experiences = [
     • Collaborate with cross-functional teams, including designers, product managers, and QA engineers, within an Agile framework to ensure cohesive and high-quality application development.  
     ` },
 
-    { id: 2, title: "Web Developer", date: "Jul 2022 - Dec 2023", company: "Santa Clara University", description: `
-    • Leveraged JavaScript ES6, HTML, CSS, and Bootstrap to develop responsive and visually consistent components, aligning with brand design guidelines. Integrated with database using SQL queries.
-    • Developed and maintained 200+ re-usable components in a CMS environment, with database integration and server‐side scripting
-    • Created a custom "Related Articles" component using Vanilla JavaScript(ES6), SQL, PHP, and AJAX, resulting in a 15% increase in user engagement.
-    • Ensured accessibility by adhering to WCAG 2.2, W3C, and ARIA standards, using tools such as Axe, Lighthouse, WAVE, NVDA, JAWS, and Voiceover to validate and optimize web content for inclusivity.
-    • Utilized front‐end technologies (JavaScript, HTML/CSS) to ensure seamless functionality of the components
-    • Employed performance optimization techniques, such as Caching, Lazy Loading, CDN, Asynchronous loading, Minification, resulting in a notable 20% improvement in page load speed, benefiting over 200,000 monthly visitors.
-    • Utilized Google Analytics to track user behavior and inform decision‐making processes, demonstrating data‐driven approach to web development.
-    • Communicated effectively with third-party vendors and different teams to resolve support tickets and provided support
-    • Facilitated efficient cross‐functional collaboration utilizing Slack and Asana task management, ensuring smooth project coordination and timely deliverables` },
+    { id: 3, title: "Web Developer", date: "Jul 2022 - Dec 2023", company: "Santa Clara University", description: `
+    • Created dynamic web pages and improved user experience for more than 200,000 users. Worked in a CMS environment.
+    • Optimized data-driven components using JavaScript and SQL, improving website responsiveness by 25% and streamlining dynamic content delivery from backend databases.
+    • Analyzed user behavior using Google Analytics, providing actionable insights that increased site traffic by 15% through data-driven enhancements to website functionality.
+    • Collaborated in an Agile environment, utilizing Git for version control, and Slack and JIRA for collaboration.
+    • Technologies: JavaScript, HTML, CSS, Google Analytics, CMS, GitHub, Jira, Slack` },
     
-    { id: 3, title: "Software Engineer", date: "Aug 2019 - Sep 2021", company: "Rajat IT Consultancy", description: `
-    • Created robust web applications with Python and Java frameworks, employing the MVC/MVT architecture to ensure modularity.
-    • Spearheaded the development of a real‐time notification system using Django Channels for a health and fitness‐based web portal, enabling prompt communication between users and enhancing user engagement.
-    • Led a React upgrade from v14 to v16.8 by introducing hooks, restructuring legacy code, and converting class components to functional components for improved state management.
-    • Designed and integrated 200+ REST APIs with AWS API Gateway, and developed microservices architecture, enhancing data interoperability, scalability, and fault tolerance.
-    • Enhanced system responsiveness by 40% with optimized SQL queries and effective caching strategies.
-    • Diagnosed and debugged software problems, employing logging and automated testing to ensure system stability.
-    • Engaged in the assessment and resolution of issue tickets for both new and legacy components.
-    • Established Git version control to streamline code management, minimizing conflicts and maximizing efficiency.
+    { id: 4, title: "Software Engineer", date: "Aug 2019 - Sep 2021", company: "Rajat IT Consultancy", description: `
+    • Designed and built single-page applications (SPAs) using React.js and Redux, improving load times and user engagement
+    • Implemented RESTful APIs to integrate external services and ensure seamless data communication between the frontend and backend
+    • Built and managed ETL processes on AWS (S3, Redshift, Glue, MSK (Kafka), supporting data modeling and analytics to provide clients with actionable insights.
+    • Managed source control and implemented CI/CD pipelines using GitHub Actions, improving the development workflow
+    • Built and managed ETL processes on AWS (S3, Redshift, Glue, MSK (Kafka), supporting data modeling and analytics to provide clients with actionable insights.
+    • Technologies: Python, Django, Java, Spring Boot, React.js, Redux, AWS, Docker, PostgreSQL, MongoDB, GitHub Actions
     ` },
 ];
 const Experience = () => {
