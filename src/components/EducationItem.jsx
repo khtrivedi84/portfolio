@@ -52,6 +52,7 @@ const EducationItem = ({ experience, index, expandedId, setExpandedId }) => {
     };
 
     const isEven = index % 2 === 0;
+    // {experience.date} |  
     return (
         <div className={`${styles.cdTimelineBlock}`}>
             <div className={`${styles.cdTimelineImg}`}>
@@ -60,7 +61,7 @@ const EducationItem = ({ experience, index, expandedId, setExpandedId }) => {
             <div className={`${styles.cdTimelineContent}`}>
                 <div ref={refHeading} className={`${styles.cdHeading} ${inViewHeading ? (isEven ? styles.slideInFromLeftHeading : styles.slideInfromRightHeading) : ''}`}>
                     <h2>{experience.title}</h2>
-                    <p>{experience.date} | <span>{experience.company}</span></p>
+                    <p><span>{experience.company}</span></p> 
                 </div>
                 <div ref={refHeading} className={`${styles.cdDescription} ${inViewHeading ? (isEven ? styles.slideInFromRightDescription : styles.slideInFromLeftDescription) : ''}`}>
                     {renderDescription(experience.description, experience.id)}
